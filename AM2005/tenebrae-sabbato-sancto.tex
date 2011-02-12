@@ -1,0 +1,194 @@
+\documentclass[11pt,twoside]{article} % use larger type; default would be 10pt
+
+% usual packages loading:
+\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+\usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{fullpage} % to reduce the margins
+
+% choose the language of the document here
+\usepackage[latin]{babel}
+
+% use the two following package for using normal TeX fonts
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{luainputenc}
+
+% If you use usual TeX fonts, here is a starting point:
+\usepackage{times}
+
+\usepackage{layout}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\topmargin=10pt
+\headheight=20pt
+\headsep=15pt
+
+\begin{document}
+\layout*
+
+\fancyhead{} % clear all header fields
+\fancyhead[CE]{\bfseries Office des Ténèbres}
+\fancyhead[CO]{\bfseries Samedi Saint}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[CO,CE]{Schola Saint-Maur}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{center}\begin{huge}\textsc{Test}\end{huge}\end{center}
+
+\setspaceafterinitial{9mm plus 0em minus 0em}
+\setspacebeforeinitial{5mm plus 0em minus 0em}
+
+\def\greinitialformat#1{%
+{\fontsize{55}{50}\selectfont #1}%
+}
+
+\def\grebiginitialformat#1{%
+{\fontsize{73}{73}\selectfont #1}%
+}
+
+\setgrefactor{22}
+\def\gretextformat#1{%
+{\fontsize{14}{14}\selectfont #1\relax}%
+}
+
+%\redlines
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{1 \Abar. VIII g}}}{\scriptsize \textsc{\textbf{1 \Abar. VIII g}}}
+\includescore{ant_In_pace.tex}
+
+\newpage
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{2 \Abar. IV e}}}{\scriptsize \textsc{\textbf{2 \Abar. IV e}}}
+\includescore{ant_Habitabit.tex}
+
+\newpage
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{3 \Abar. VII c}}}{\scriptsize \textsc{\textbf{3 \Abar. VII c}}}
+\includescore{ant_Caro_mea.tex}
+
+\newpage
+
+\begin{center}\begin{huge}\textsc{Lectio I}\end{huge}\end{center}
+
+\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+\includescore{../lect/lect_I.tex}
+
+\newpage
+
+\includescore{resp_Sicut_ovis.tex}
+
+\newpage
+
+\begin{center}\begin{huge}\textsc{Lectio II}\end{huge}\end{center}
+
+\includescore{../lect/lect_II.tex}
+
+\newpage
+
+\includescore{resp_Ierusalem.tex}
+
+\newpage
+
+\begin{center}\begin{huge}\textsc{Lectio III}\end{huge}\end{center}
+
+\includescore{../lect/lect_III.tex}
+
+\newpage
+
+\includescore{resp_Plange.tex}
+
+\newpage
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{1 \Abar. V a}}}{\scriptsize \textsc{\textbf{1 \Abar. V a}}}
+\includescore{ant_Elevamini.tex}
+
+\newpage
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{2 \Abar. IV e}}}{\scriptsize \textsc{\textbf{2 \Abar. IV e}}}
+\includescore{ant_Credo_videre.tex}
+
+\newpage
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{3 \Abar. VIII g}}}{\scriptsize \textsc{\textbf{3 \Abar. VIII g}}}
+\includescore{ant_Domine_abstraxisti.tex}
+
+\newpage
+
+\includescore{resp_Recessit.tex}
+
+\newpage
+
+\includescore{resp_O_vos_omnes.tex}
+
+\newpage
+
+\includescore{resp_Ecce.tex}
+
+\newpage
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{1 \Abar. VIII g}}}{\scriptsize \textsc{\textbf{1 \Abar. VIII g}}}
+\includescore{ant_Deus_adiuvat_me.tex}
+
+\newpage
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{2 \Abar. VII a}}}{\scriptsize \textsc{\textbf{2 \Abar. VII a}}}
+\includescore{ant_In_pace_factus_est.tex}
+
+\newpage
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{3 \Abar. IV d}}}{\scriptsize \textsc{\textbf{3 \Abar. IV d}}}
+\includescore{ant_Factus_sum.tex}
+
+\newpage
+
+\includescore{resp_Astiterunt.tex}
+
+\newpage
+
+\includescore{resp_Aestimatus_sum.tex}
+
+\newpage
+
+\includescore{resp_Sepulto.tex}
+
+\newpage
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{1 \Abar. IV c}}}{\scriptsize \textsc{\textbf{1 \Abar. IV c}}}
+\includescore{ant_O_mors.tex}
+
+\newpage
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{2 \Abar. II* a}}}{\scriptsize \textsc{\textbf{2 \Abar. II* a}}}
+\includescore{ant_Plangent_eum.tex}
+
+\newpage
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{3 \Abar. VII b}}}{\scriptsize \textsc{\textbf{3 \Abar. VII b}}}
+\includescore{ant_Attendite.tex}
+
+\newpage
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{4 \Abar. II d}}}{\scriptsize \textsc{\textbf{4 \Abar. II d}}}
+\includescore{ant_A_porta_inferi.tex}
+
+\newpage
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{5 \Abar. VIII c}}}{\scriptsize \textsc{\textbf{5 \Abar. VIII c}}}
+\includescore{ant_O_vos_omnes.tex}
+
+\newpage
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{\Abar. I g}}}{\scriptsize \textsc{\textbf{\Abar. I g}}}
+\includescore{ant_Mulieres.tex}
+
+\newpage
+
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{\Abar.}}}{\scriptsize \textsc{\textbf{\Abar.}}}
+\includescore{ant_Christus.tex}
+
+\end{document}
