@@ -1,0 +1,17 @@
+% Bibliothèque commune de fonctions de formattage
+%
+% Inspirées du livret d'exemple de complies bénédictines de Gregorio
+
+\def\latin#1{%
+\selectlanguage{latin}
+\ParallelLText{#1}%
+\selectlanguage{francais}%
+\relax %
+}
+
+\def\vern#1{%
+\ParallelRText{#1}%
+\ParallelPar %
+%\kern -1mm%
+\relax %
+}
