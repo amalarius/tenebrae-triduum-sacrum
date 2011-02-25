@@ -1,0 +1,18 @@
+name:Psaume 87;
+gabc-copyright: (C) Remi Lucet, 2011, public domain;
+office-part: 3 Ant. (III nocturno);
+occasion: Tenebrae sabbato;
+commentary: ;
+transcriber: Remi Lucet;
+transcription-date: 20110224;
+gregoriotex-font: greciliae;
+mode: ;
+initial-style: 0;
+
+%%
+(c3)
+~1.~D{ó}(i)mi(hi)ne,(i) Dé(i)us(i) sa(i)<i>lú</i>(h)<i>tis</i>(i) 
+<b>mé</b>(j ir)æ~:(i.) ~*(:) in(i) dí(i)e(i) cla(i)má(i)vi,(i) 
+<i>et</i>(h) <i>noc</i>(i)<i>te</i>(j) <b>có</b>(h)ram(ir) te.(i.) (::)
+
+% vim: se enc=utf8 fenc=utf8 digraph syn=gabc:

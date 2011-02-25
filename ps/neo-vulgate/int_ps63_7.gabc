@@ -1,0 +1,19 @@
+name:Psalmus 63;
+gabc-copyright: (C) Remi Lucet, 2011, public domain;
+office-part: ;
+occasion: Tenebrae sabbato;
+commentary: ;
+transcriber: Remi Lucet;
+transcription-date: 20110224;
+gregoriotex-font: greciliae;
+mode: ;
+initial-style: 0;
+
+%%
+(c3)
+~1.~{E}x(hg)áu(hi)di,(i) Dé(i)us,(i) o(i)ra(i)ti(i)ó(i)nem(i) 
+<b>mé</b>(k)am(j) cum(j) <b>dé</b>(i)pre(jr)cor~:(j.) ~*(:) 
+a(i) ti-(iz) mó(i)re(i ) i(i)ni(i)mí(i)ci(i ) é(i)ri(i)pe(i ) 
+<b>á</b>(j)ni(ir)mam(i) <b>mé</b>(h hr)am.(g.) (::)
+
+% vim: se enc=utf8 fenc=utf8 digraph syn=gabc:

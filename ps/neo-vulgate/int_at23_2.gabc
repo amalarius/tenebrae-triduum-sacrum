@@ -1,0 +1,19 @@
+name:Canticum AT 23;
+gabc-copyright: (C) Remi Lucet, 2011, public domain;
+office-part: ;
+occasion: Tenebrae sabbato;
+commentary: ;
+transcriber: Remi Lucet;
+transcription-date: 20110224;
+gregoriotex-font: greciliae;
+mode: ;
+initial-style: 0;
+
+%%
+(f3)
+~1.~{E}(e)go(f) dí(h)xi~:(h) In(h) di(h)mí(h)di(h)o(h) 
+di(h)é(h)rum(h) me(h)<b>ó</b>(i hr)rum(h.) ~*(:)
+vá(h)dam(h) ad(h) pór(h)<i>tas</i>(g) <b>ín</b>(e)fe(fr)ri.(f. )
+<i>Fl</i>{<i>e</i>}<i>xus~:</i>(::) vi(h)vén(h)ti(h)um,~<sp>+</sp>(f.  h h h) (::)
+
+% vim: se enc=utf8 fenc=utf8 digraph syn=gabc:

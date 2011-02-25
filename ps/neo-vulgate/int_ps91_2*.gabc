@@ -1,0 +1,20 @@
+name:Psalmus 91;
+gabc-copyright: (C) Remi Lucet, 2011, public domain;
+office-part: ;
+occasion: Tenebrae sabbato;
+commentary: ;
+transcriber: Remi Lucet;
+transcription-date: 20110224;
+gregoriotex-font: greciliae;
+mode: ;
+initial-style: 0;
+
+%%
+(c3)
+~1.~B{ó}(i)num(hi) est(i) con(i)fi(i)<i>té</i>(h)<i>ri</i>(i) 
+<b>Dó</b>(j)mi(ir)no~:(i.) ~*(:) et(i) psál(i)le(i)re(i) 
+nó(i)mi(i)ni(i) <i>tú</i>(h)<i>o</i>,(i) 
+<i>Al</i>(j)<b>tís</b>(h)si(fr)me.(f. ) 
+<i>Fl</i>{<i>e</i>}<i>xus~:</i>(::) Dó(i)mi(hr)ne,~<sp>+</sp>(h.  i i i) (::)
+
+% vim: se enc=utf8 fenc=utf8 digraph syn=gabc:

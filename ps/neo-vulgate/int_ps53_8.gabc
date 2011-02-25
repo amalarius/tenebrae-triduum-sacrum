@@ -1,0 +1,19 @@
+name:Psalmus 53;
+gabc-copyright: (C) Remi Lucet, 2011, public domain;
+office-part: 1 Ant. (III nocturno);
+occasion: Tenebrae sabbato;
+commentary: ;
+transcriber: Remi Lucet;
+transcription-date: 20110224;
+gregoriotex-font: greciliae;
+mode: ;
+initial-style: 0;
+
+%%
+(c4)
+~1.~D{é}(g)us,(h) in(j) nó(j)mi(j)ne(j) tú(j)o(j) <sc>(+)</sc>(hr)
+sál(j)vum(j) <b>me</b>(k jr) fac~:(j.) *(:) et(j) in(jz) 
+
+vir(j)tú(j)te(j) tú(j)a(j) <i>jú</i>(i)<i>di</i>(j)<b>ca</b>(h gr) me.(g.) (::)
+
+% vim: se enc=utf8 fenc=utf8 digraph syn=gabc:
