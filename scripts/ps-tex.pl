@@ -70,29 +70,6 @@ open ($fh_tex, '>', $ps_tex) or die "Echec de l'ouverture du fichier : $ps_tex "
 
 ## Maintenant, lecture parallèle des deux fichiers et composition de la sortie
 
-# Numéro du psaume
-my $ligne = <$fh_ps>;
-my $ligne_vern =<$fh_vern>;
-
-print $fh_tex texte_centre($ligne_vern), "\n";
-
-# Titre
-$ligne = <$fh_ps>;
-$ligne_vern =<$fh_vern>;
-
-print $fh_tex texte_centre($ligne_vern), "\n";
-
-# Commentaire en italique
-$ligne = <$fh_ps>;
-$ligne_vern =<$fh_vern>;
-
-print $fh_tex texte_centre(texte_italique($ligne_vern)), "\n";
-print $fh_tex espace_vertical(0.6);
-
-#Ligne séparatrice
-$ligne = <$fh_ps>;
-$ligne_vern =<$fh_vern>;
-
 # Psaume en double collonne latin/vernaculaire
 print $fh_tex debut_parallele();
 
@@ -100,7 +77,7 @@ my $nb = 1;
 while ($ligne = <$fh_ps>) {
 	# On indique le début de la psalmodie par une flêche, au deuxième verset
 	if ($nb == 2) {
-		$ligne = '\textrightarrow ' . $ligne;
+		$ligne = '{\color{red} \textrightarrow} ' . $ligne;
 	}
 	
 	## A gauche, la psalmodie latine	
