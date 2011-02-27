@@ -4,6 +4,7 @@
 
 use strict;
 use utf8;
+use Getopt::Std;
 
 sub debut_block_italique {
 	return '\textit{';
@@ -16,24 +17,30 @@ sub fin_block() {
 # Programme principal
 
 sub usage() {
-	print STDERR "Usage: ", $0, " <répons vernaculaire>\n";
+	print STDERR "Usage: ", $0, "[options] <répons vernaculaire>\n\n";
+	print STDERR "Options:\n";
+	print STDERR "\t-o : fichier de sortie\n";
 }
 
-if ($#ARGV != 0) {
-	usage;
-	exit(1);
-}
+our ($opt_o);
+getopt('o');
 
 my $rep = $ARGV[0];
-my $rep_tex = $vers;
+my $rep_tex;
 
-$rep_tex =~ s/\.txt$/\.tex/;
+if (defined($opt_o)) {
+	$rep_tex = $opt_o;
+}
+else {
+	$rep_tex = $rep;
+	$rep_tex =~ s/\.txt$/\.tex/;
+}
 
 my ($fh, $fh_tex);
 
 # Ouverture des fichiers d'entrée
-open ($fh, '<', $rep) or die "Echec de l'ouverture du fichier : $ps ", $!;
-open ($fh_tex, '>', $rep_tex) or die "Echec de l'ouverture du fichier : $ps_vern ", $!;
+open ($fh, '<', $rep) or die "Echec de l'ouverture du fichier : $rep ", $!;
+open ($fh_tex, '>', $rep_tex) or die "Echec de l'ouverture du fichier : $rep_tex ", $!;
 
 my $ligne;
 
