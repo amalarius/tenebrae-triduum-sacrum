@@ -48,6 +48,8 @@ print $fh_tex debut_block_italique;
 while (defined($ligne = <$fh>)) {
 	# Remplacement du symbole de verset par un symbole latex
 	$ligne =~ s|V/|\\Vbarsmall|;
+	# Remplacement du symbole de répons par un symbole latex
+	$ligne =~ s|R/|\\Rbar|;
 	print $fh_tex $ligne;
 }
 print $fh_tex fin_block;
