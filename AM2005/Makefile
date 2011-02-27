@@ -2,6 +2,7 @@
 RESP_TEX_BIN=../scripts/resp-tex.pl
 PS_TEX_BIN=../scripts/ps-tex.pl
 LECT_TEX_BIN=../scripts/lect-tex.pl
+TIT_PS_TEX_BIN=../scripts/tit-ps-tex.pl
 
 # Fichiers gabc à compiler
 GABC_FILES=$(wildcard *.gabc) $(wildcard ../lect/*.gabc)\
@@ -21,6 +22,10 @@ VERS_FR_TEX=$(VERS_FR_TXT:.txt=.tex)
 PS_TXT=$(wildcard ../ps/neo-vulgate/ps*.txt)
 PS_FR_TXT=$(wildcard ../ps/fr/ps*_fr.txt)
 
+# Titres des psaumes en français
+TIT_PS_FR_TXT=$(wildcard ../ps/fr/tit_*_fr.txt)
+TIT_PS_FR_TEX=$(TIT_PS_FR_TXT:.txt=.tex)
+
 # Leçons latin/français
 
 # Traduction de versets
@@ -30,7 +35,7 @@ PDF=$(DOCUMENT).pdf
 
 all: $(PDF)
 
-$(DOCUMENT).pdf : $(DOCUMENT).tex $(TEX_GEN_FILES) $(RESP_FR_TEX) $(ANT_FR_TEX) $(VERS_FR_TEX)
+$(DOCUMENT).pdf : $(DOCUMENT).tex $(TEX_GEN_FILES) $(RESP_FR_TEX) $(ANT_FR_TEX) $(VERS_FR_TEX) $(TIT_PS_FR_TEX)
 	lualatex $^
 
 fr/resp%.tex: fr/resp%.txt
@@ -41,6 +46,9 @@ fr/ant%.tex: fr/ant%.txt
 
 fr/vers%.tex: fr/vers%.txt
 	$(RESP_TEX_BIN) $^
+	
+../ps/fr/tit_%_fr.tex: ../ps/fr/tit_%_fr.txt
+	$(TIT_PS_TEX_BIN) $^
 	
 %.tex: %.gabc
 	gregorio $^
