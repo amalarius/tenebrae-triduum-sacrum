@@ -2,6 +2,7 @@
 
 use strict;
 use utf8;
+use Getopt::Std;
 
 #### Fonctions de formattage LaTeX
 sub texte_centre($) {
@@ -48,16 +49,20 @@ sub usage() {
 	print STDERR "Usage: ", $0, " <psaume latin> <psaume vernaculaire>\n";
 }
 
-if ($#ARGV != 1) {
-	usage;
-	exit(1);
-}
+our ($opt_o);
+getopt('o');
 
 my $ps  = $ARGV[0];
 my $ps_vern = $ARGV[1];
+my $ps_tex;
 
-my $ps_tex = $ps;
-$ps_tex =~ s/(ps\d+).*$/$1\.tex/;
+if (defined($opt_o)) {
+	$ps_tex = $opt_o;
+}
+else {
+	$ps_tex = $ps;
+	$ps_tex =~ s/\.txt$/\.tex/;
+}
 
 my ($fh_ps, $fh_vern, $fh_tex);
 
@@ -74,15 +79,17 @@ open ($fh_tex, '>', $ps_tex) or die "Echec de l'ouverture du fichier : $ps_tex "
 print $fh_tex debut_parallele();
 
 my $nb = 1;
-while ($ligne = <$fh_ps>) {
+my ($ligne, $ligne_vern);
+while (defined($ligne = <$fh_ps>)) {
+	chomp $ligne;
 	# On indique le début de la psalmodie par une flêche, au deuxième verset
 	if ($nb == 2) {
-		$ligne = '{\color{red} \textrightarrow} ' . $ligne;
+		$ligne = '\textcolor{red}{\large{\textrightarrow}} ' . $ligne;
 	}
 	
 	## A gauche, la psalmodie latine	
 	# Signe de croix
-	$ligne =~ s/-|-/\\grecross/g;
+	$ligne =~ s/=\|=/\\textcolor\{red\}\{\\grecross\}/g;
 	
 	# Flexe
 	$ligne =~ s/\+/\\dagger/g;
