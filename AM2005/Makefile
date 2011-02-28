@@ -40,7 +40,9 @@ PDF=$(DOCUMENT).pdf
 
 all: $(PDF)
 
-$(DOCUMENT).pdf : $(DOCUMENT).tex commun.tex $(TEX_GEN_FILES) $(RESP_FR_TEX) $(ANT_FR_TEX) $(VERS_FR_TEX) $(TIT_PS_FR_TEX) $(PS_TEX)
+$(DOCUMENT).pdf : $(DOCUMENT).tex commun.tex $(TEX_GEN_FILES) $(RESP_FR_TEX)\
+	$(ANT_FR_TEX) $(VERS_FR_TEX) $(TIT_PS_FR_TEX) $(PS_TEX)\
+	$(RESP_TEX_BIN) $(PS_TEX_BIN) $(LECT_TEX_BIN) $(TIT_PS_TEX_BIN)
 	lualatex $^
 
 fr/resp%.tex: fr/resp%.txt
@@ -105,5 +107,7 @@ fr/vers%.tex: fr/vers%.txt
 	
 clean:
 	rm -f $(TEX_GEN_FILES) $(PDF) *~ *.log *.aux *.gaux *~
-	rm -f $(RESP_FR_TEX) $(RESP_FR_TXT:.txt=.aux)
-	rm -f $(ANT_FR_TEX) $(ANT_FR_TXT:.txt=.aux)
+	rm -f $(RESP_FR_TEX) $(RESP_FR_TEX:.tex=.aux)
+	rm -f $(ANT_FR_TEX) $(ANT_FR_TEX:.tex=.aux)
+	rm -f $(TIT_PS_FR_TEX) $(TIT_PS_FR_TEX:.tex=.aux)
+	rm -f $(PS_TEX) $(PS_TEX:.tex=.aux)
