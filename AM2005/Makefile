@@ -58,49 +58,49 @@ fr/vers%.tex: fr/vers%.txt
 	$(TIT_PS_TEX_BIN) $^
 
 ../ps/neo-vulgate/at23_2.tex: ../ps/neo-vulgate/at23_2.txt ../ps/fr/at23_fr.txt
-	$(PS_TEX_BIN) $^
+	$(PS_TEX_BIN) -2 $^
 	
 ../ps/neo-vulgate/ps4_8.tex: ../ps/neo-vulgate/ps4_8.txt ../ps/fr/ps4_fr.txt
-	$(PS_TEX_BIN) $^
+	$(PS_TEX_BIN) -2 $^
 	
 ../ps/neo-vulgate/ps14_4.tex: ../ps/neo-vulgate/ps14_4.txt ../ps/fr/ps14_fr.txt
-	$(PS_TEX_BIN) $^
+	$(PS_TEX_BIN) -2 $^
 	
 ../ps/neo-vulgate/ps15_7.tex: ../ps/neo-vulgate/ps15_7.txt ../ps/fr/ps15_fr.txt
-	$(PS_TEX_BIN) $^
+	$(PS_TEX_BIN) -2 $^
 	
 ../ps/neo-vulgate/ps23_5.tex: ../ps/neo-vulgate/ps23_5.txt ../ps/fr/ps23_fr.txt
-	$(PS_TEX_BIN) $^
+	$(PS_TEX_BIN) -2 $^
 	
 ../ps/neo-vulgate/ps26_4.tex: ../ps/neo-vulgate/ps26_4.txt ../ps/fr/ps26_fr.txt
-	$(PS_TEX_BIN) $^
+	$(PS_TEX_BIN) -2 $^
 	
 ../ps/neo-vulgate/ps29_8.tex: ../ps/neo-vulgate/ps29_8.txt ../ps/fr/ps29_fr.txt
-	$(PS_TEX_BIN) $^
+	$(PS_TEX_BIN) -2 $^
 	
 ../ps/neo-vulgate/ps50_2*.tex: ../ps/neo-vulgate/ps50_2*.txt ../ps/fr/ps50_fr.txt
-	$(PS_TEX_BIN) $^
+	$(PS_TEX_BIN) -2 $^
 
 ../ps/neo-vulgate/ps53_8.tex: ../ps/neo-vulgate/ps53_8.txt ../ps/fr/ps53_fr.txt
-	$(PS_TEX_BIN) $^
+	$(PS_TEX_BIN) -2 $^
 	
 ../ps/neo-vulgate/ps63_7.tex: ../ps/neo-vulgate/ps63_7.txt ../ps/fr/ps63_fr.txt
-	$(PS_TEX_BIN) $^
+	$(PS_TEX_BIN) -2 $^
 
 ../ps/neo-vulgate/ps75_7.tex: ../ps/neo-vulgate/ps75_7.txt ../ps/fr/ps75_fr.txt
-	$(PS_TEX_BIN) $^
+	$(PS_TEX_BIN) -2 $^
 
 ../ps/neo-vulgate/ps87_4.tex: ../ps/neo-vulgate/ps87_4.txt ../ps/fr/ps87_fr.txt
-	$(PS_TEX_BIN) $^
+	$(PS_TEX_BIN) -2 $^
 
 ../ps/neo-vulgate/ps91_2*.tex: ../ps/neo-vulgate/ps91_2*.txt ../ps/fr/ps91_fr.txt
-	$(PS_TEX_BIN) $^
+	$(PS_TEX_BIN) -2 $^
 
 ../ps/neo-vulgate/ps150_8.tex: ../ps/neo-vulgate/ps150_8.txt ../ps/fr/ps150_fr.txt
-	$(PS_TEX_BIN) $^
+	$(PS_TEX_BIN) -2 $^
 	
 ../ps/neo-vulgate/benedictus_1.tex: ../ps/neo-vulgate/benedictus_1.txt ../ps/fr/benedictus_fr.txt
-	$(PS_TEX_BIN) $^
+	$(PS_TEX_BIN) -2 $^
 	
 %.tex: %.gabc
 	gregorio $^
