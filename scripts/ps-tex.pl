@@ -26,7 +26,7 @@ sub espace_vertical($) {
 }
 
 sub debut_parallele() {
-	return "\\begin{Parallel}[v]{\\colwidth}{\\colwidth}\n";
+	return "\\begin{Parallel}[v]{\\collatin}{\\colvern}\n";
 }
 
 sub fin_parallele() {
@@ -49,8 +49,8 @@ sub usage() {
 	print STDERR "Usage: ", $0, " <psaume latin> <psaume vernaculaire>\n";
 }
 
-our ($opt_o);
-getopt('o');
+our ($opt_o, $opt_2);
+getopts('o:2');
 
 my $ps  = $ARGV[0];
 my $ps_vern = $ARGV[1];
@@ -73,29 +73,40 @@ open ($fh_vern, '<', $ps_vern) or die "Echec de l'ouverture du fichier : $ps_ver
 # Ouverture du fichier tex en sortie
 open ($fh_tex, '>', $ps_tex) or die "Echec de l'ouverture du fichier : $ps_tex ", $!;
 
+my $nb = 1;
+my ($ligne);
+# Si on commence au deuxième verset, on affiche le premier verset en
+# vernaculaire sur une seule colonne
+if (defined($opt_2)) {
+	$ligne = <$fh_ps>;
+	
+	$ligne = <$fh_vern>;
+	chomp $ligne;
+	print $fh_tex texte_italique($ligne);
+}
+
 ## Maintenant, lecture parallèle des deux fichiers et composition de la sortie
 
 # Psaume en double collonne latin/vernaculaire
 print $fh_tex debut_parallele();
 
-my $nb = 1;
-my ($ligne, $ligne_vern);
 while (defined($ligne = <$fh_ps>)) {
 	chomp $ligne;
+	
 	# On indique le début de la psalmodie par une flêche, au deuxième verset
-	if ($nb == 2) {
-		$ligne = '\textcolor{red}{\large{\textrightarrow}} ' . $ligne;
-	}
+	#if (! defined($opt_2) && $nb == 2) {
+	#	$ligne = '\textcolor{red}{\large{\textrightarrow}} ' . $ligne;
+	#}
 	
 	## A gauche, la psalmodie latine	
 	# Signe de croix
 	$ligne =~ s/=\|=/\\textcolor\{red\}\{\\grecross\}/g;
 	
 	# Flexe
-	$ligne =~ s/\+/\\dagger/g;
+	$ligne =~ s/\+/{\\color{red} \\dagger}/g;
 	
 	# Mediante, plus passage à la ligne
-	$ligne =~ s/\*/{\\color{red} \\greheightstar}\\\\\n/g;
+	$ligne =~ s/\*/{\\color{red} \\greheightstar}\n/g;
 	
 	# Syllabes préparatoires en italique
 	$ligne =~ s|/([^/]*?)/|\\textit{$1}|g;
@@ -106,8 +117,9 @@ while (defined($ligne = <$fh_ps>)) {
 	print $fh_tex colonne_gauche($ligne);
 	
 	## A droite, la psalmodie vernaculaire
-	if (defined($ligne_vern = <$fh_vern>)) {
-		print $fh_tex colonne_droite($ligne_vern);
+	if (defined($ligne = <$fh_vern>)) {
+		chomp $ligne;
+		print $fh_tex colonne_droite(texte_italique($ligne));
 	}
 	
 	$nb++;
