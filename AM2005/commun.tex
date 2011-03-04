@@ -3,8 +3,11 @@
 % Inspirées du livret d'exemple de complies bénédictines de Gregorio
 %
 
-\newdimen\colwidth
-\colwidth=5.7cm
+\newdimen\collatin
+\collatin=8cm
+
+\newdimen\colvern
+\colvern=5.7cm
 
 \def\latin#1{%
 \selectlanguage{latin}
@@ -56,15 +59,26 @@
 \end{center}%
 }
 
-\def\titrenocture#1{%
+\def\titrenocturne#1{%
 \begin{center}%
-\large{\uppercase{#1}}%
+\Large{\textbf{\uppercase{#1}}}%
 \end{center}%
 }
 
 \def\titrelaudes#1{%
 \begin{center}%
-\large{\uppercase{#1}}%
+\Large{\textbf{\uppercase{#1}}}%
 \end{center}%
 }
 
+\def\finnocturne{%
+\begin{center}%
+\gresep{3}{35}%
+\end{center}
+}
+
+\def\finoffice{%
+\begin{center}%
+\gresep{2}{40}%
+\end{center}
+}

@@ -30,6 +30,9 @@
 \usepackage{textcomp}
 
 \pagestyle{fancy}
+%\voffset=-1.5cm
+%\hoffset=-1.5cm
+%\textwidth=545pt
 %\topmargin=10pt
 \headheight=20pt
 \headsep=15pt
@@ -72,9 +75,16 @@
 {\fontsize{14}{14}\selectfont #1\relax}%
 }
 
+% Première page
+%\begin{titlepage}
+
+%\end{titlepage}
+
 % Premier nocturne
 
 \newpage
+
+\titrenocturne{Premier nocturne.}
 
 \titreantienne{Antienne 1.}
 
@@ -169,9 +179,12 @@
 
 \input{./fr/resp_Plange_fr}
 
+\finnocturne
 % Deuxième nocturne
 
 \newpage
+
+\titrenocturne{Deuxième nocturne.}
 
 % Antienne 1
 
@@ -270,6 +283,8 @@
 
 \newpage
 
+\titrenocturne{Troisième nocturne.}
+
 % Antienne 1
 
 \titreantienne{Antienne 1.}
@@ -364,6 +379,8 @@
 
 \newpage
 
+\titrelaudes{Laudes}
+
 % Antienne 1
 
 \titreantienne{Antienne 1.}
@@ -410,7 +427,7 @@
 % Psaume 63
 \input{../ps/fr/tit_ps63_fr}
 \input{../ps/neo-vulgate/int_ps63_7}
-\input{../ps/neo-vulgate/int_ps63_7}
+\input{../ps/neo-vulgate/ps63_7}
 
 % Antienne 4
 
@@ -470,6 +487,8 @@
 \input{./fr/ant_Christus_fr}
 
 % Oraison
+
+\finoffice
 
 % Annexes
 \newpage
