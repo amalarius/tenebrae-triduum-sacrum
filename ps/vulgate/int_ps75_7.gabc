@@ -1,0 +1,18 @@
+name:Psalmus 75;
+gabc-copyright: (C) Remi Lucet, 2011, public domain;
+office-part: 2 Ant. (III nocturno);
+occasion: Tenebrae sabbato;
+commentary: ;
+transcriber: Remi Lucet;
+transcription-date: 20110224;
+gregoriotex-font: greciliae;
+mode: ;
+initial-style: 0;
+
+%%
+(c3)
+~1.~N{ó}(hg) tus(hi) in(i) Jud(i)<b><sp>'ae</sp></b>(k jr)a(j) 
+<b>Dé</b>(i jr)us~:(j. ) ~*(:) in(i) Is(i)ra(i)el(i) má(i)gnum(i) 
+<b>nó</b>(j ir z)men(i) <b>é</b>(h hr)ius.(gf.) (::)
+
+% vim: se enc=utf8 fenc=utf8 digraph syn=gabc:

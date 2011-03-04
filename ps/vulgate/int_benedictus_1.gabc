@@ -1,0 +1,20 @@
+name:Canticus Benedictus Dominus;
+gabc-copyright: (C) Remi Lucet, 2011, public domain;
+office-part: ;
+occasion: Tenebrae sabbato;
+commentary: ;
+transcriber: Remi Lucet;
+transcription-date: 20110224;
+gregoriotex-font: greciliae;
+mode: ;
+initial-style: 0;
+
+%%
+(c4)
+~1.~B{e}(f)ne(gh)díc(h)tus(h) Dó(h)mi(h)nus,(h) 
+<b>Dé</b>(ixi hr )us(h) <b>Is</b>(g)ra(hr)el,(h.) 
+~*(:) qui(h)a(h) vi(h)si(h)tá(h)vit,(hz) 
+et(h) fé(h)cit(h) red(h)emp(h)ti(h)ó(h)nem(h) 
+<i>plé</i>(g)<i>bis</i>(f) <b>sú</b>(gh gr)æ~:(g.) (::)
+
+% vim: se enc=utf8 fenc=utf8 digraph syn=gabc:

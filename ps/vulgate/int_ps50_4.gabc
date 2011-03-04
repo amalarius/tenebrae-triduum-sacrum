@@ -1,0 +1,18 @@
+name:Psalmus 50;
+gabc-copyright: (C) Remi Lucet, 2011, public domain;
+office-part: ;
+occasion: Tenebrae sabbato;
+commentary: ;
+transcriber: Remi Lucet;
+transcription-date: 20110224;
+gregoriotex-font: greciliae;
+mode: ;
+initial-style: 0;
+
+%%
+(c3)
+~1.~M{i}(i)se(hi)ré(i)re(i) <i>mé</i>(h)<i>i</i>,(i) 
+<b>Dé</b>(j ir)us,(i.) ~*(:) se(i)cún(i)dum(i)
+mág(i)nam(i) mi(i)se(i)ri(i)cór-(i) di(i)am(i) <b>tú</b>(i hr)am.(h.) (::)
+
+% vim: se enc=utf8 fenc=utf8 digraph syn=gabc:

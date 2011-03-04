@@ -1,0 +1,20 @@
+name:Psalmus 14;
+gabc-copyright: (C) Remi Lucet, 2011, public domain;
+office-part: 2 Ant. (I nocturno);
+occasion: Tenebrae sabbato;
+commentary: ;
+transcriber: Remi Lucet;
+transcription-date: 20110224;
+gregoriotex-font: greciliae;
+mode: ;
+initial-style: 0;
+
+%%
+(c3)
+~1.~D{ó}(h)mi(gh)ne,(h) qui(h) ha(h)bi(h)tá(h)bit(h) in(h)
+ta(h)ber(h)ná(h)<i>cu</i>(g)<i>lo</i>(h) <b>tú</b>(i hr)o~?(h. ) *(:)
+
+aut(h) quis(h) re(h)qui(h)és(h)cet(h) in(h) món(h)<i>te</i>(g)
+<i>sánc</i>(h)<i>to</i>(ih) ~~~~~(gr) <b>tú</b>(gf)o~?(e.) (::) 
+
+% vim: se enc=utf8 fenc=utf8 digraph syn=gabc:

@@ -1,0 +1,21 @@
+name:Psalmus 150;
+gabc-copyright: (C) Remi Lucet, 2011, public domain;
+office-part: ;
+occasion: Tenebrae sabbato;
+commentary: ;
+transcriber: Remi Lucet;
+transcription-date: 20110224;
+gregoriotex-font: greciliae;
+mode: ;
+initial-style: 0;
+
+%%
+(c3)
+~1.~L{au}(e)dá(f)te(h)  Dó(h)mi(h)num(h) in(h) sán(h)ctis(h) 
+<b>é</b>(i)ius~:(h.) ~*(:) lau(h)dá(h)te(h) é(h)um(h) in(h) 
+fir(h)ma(h)mén(h)to(h) vir(h)<i>tú</i>(f)<i>tis</i>(h)
+<b>e</b>(i hr)ius.(h.  )
+<i>Fl</i>{<i>e</i>}<i>xus~:</i>(::) 
+be(h)ne(h)so(h)nán(h)ti(fr)bus~:~<sp>+</sp>(f.  h h) (::)
+
+% vim: se enc=utf8 fenc=utf8 digraph syn=gabc:
