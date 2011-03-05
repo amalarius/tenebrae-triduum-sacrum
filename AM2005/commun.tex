@@ -10,10 +10,10 @@
 \colpsvern=5.7cm
 
 \newdimen\collectlatin
-\collectlatin=5.7cm
+\collectlatin=7cm
 
 \newdimen\collectvern
-\collectvern=5.7cm
+\collectvern=7cm
 
 \def\latin#1{%
 \selectlanguage{latin}
@@ -45,6 +45,23 @@
 \end{minipage}%
 }%
 \vspace{-0.2cm}%
+}
+
+\newdimen\temp 
+\def\twocolspace#1{%
+\temp=#1%
+\advance\temp by 1mm%
+\latin{\ \vspace{\temp}}\vern{\ \vspace{\temp}}%
+\kern -1mm%
+\relax %
+}
+
+\def\twocolstrictspace#1{%
+\temp=#1%
+\advance\temp by 1mm%
+\ParallelLText{\ \vspace*{\temp}}\ParallelRText{\ \vspace*{\temp}}%
+\kern -1mm%
+\relax %
 }
 
 \def\titreantienne#1{%

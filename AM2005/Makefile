@@ -31,6 +31,10 @@ PS_TEX=$(PS_TXT:.txt=.tex)
 TIT_PS_FR_TXT=$(wildcard ../ps/fr/tit_*_fr.txt)
 TIT_PS_FR_TEX=$(TIT_PS_FR_TXT:.txt=.tex)
 
+LECT_LT_TXT=$(wildcard ../lect/lect_*_lt.txt) $(wildcard ../lect/LH/lect_*_lt.txt)
+LECT_FR_TXT=$(wildcard ../lect/lect_*_fr.txt) $(wildcard ../lect/LH/lect_*_fr.txt)
+LECT_TEX=$(LECT_LT_TXT:.txt=.tex)
+
 # Leçons latin/français
 
 # Traduction de versets
@@ -42,6 +46,7 @@ all: $(PDF)
 
 $(DOCUMENT).pdf : $(DOCUMENT).tex commun.tex $(TEX_GEN_FILES) $(RESP_FR_TEX)\
 	$(ANT_FR_TEX) $(VERS_FR_TEX) $(TIT_PS_FR_TEX) $(PS_TEX)\
+	$(LECT_TEX)\
 	$(RESP_TEX_BIN) $(PS_TEX_BIN) $(LECT_TEX_BIN) $(TIT_PS_TEX_BIN)
 	lualatex $<
 
@@ -102,6 +107,33 @@ fr/vers%.tex: fr/vers%.txt
 ../ps/neo-vulgate/benedictus_1.tex: ../ps/neo-vulgate/benedictus_1.txt ../ps/fr/benedictus_fr.txt
 	$(PS_TEX_BIN) -2 $^
 	
+../lect/lect_I_lt.tex: ../lect/lect_I_lt.txt ../lect/lect_I_fr.txt
+	$(LECT_TEX_BIN) -t $^
+	
+../lect/lect_II_lt.tex: ../lect/lect_II_lt.txt ../lect/lect_II_fr.txt
+	$(LECT_TEX_BIN) $^
+	
+../lect/lect_III_lt.tex: ../lect/lect_III_lt.txt ../lect/lect_III_fr.txt
+	$(LECT_TEX_BIN) $^
+
+../lect/LH/lect_IV_lt.tex: ../lect/LH/lect_IV_lt.txt ../lect/LH/lect_IV_fr.txt
+	$(LECT_TEX_BIN) -t $^
+	
+../lect/LH/lect_V_lt.tex: ../lect/LH/lect_V_lt.txt ../lect/LH/lect_V_fr.txt
+	$(LECT_TEX_BIN) $^
+
+../lect/LH/lect_VI_lt.tex: ../lect/LH/lect_VI_lt.txt ../lect/LH/lect_VI_fr.txt
+	$(LECT_TEX_BIN) $^
+	
+../lect/LH/lect_VII_lt.tex: ../lect/LH/lect_VII_lt.txt ../lect/LH/lect_VII_fr.txt
+	$(LECT_TEX_BIN) -t $^
+	
+../lect/LH/lect_VIII_lt.tex: ../lect/LH/lect_VIII_lt.txt ../lect/LH/lect_VIII_fr.txt
+	$(LECT_TEX_BIN) $^
+	
+../lect/LH/lect_IX_lt.tex: ../lect/LH/lect_IX_lt.txt ../lect/LH/lect_IX_fr.txt
+	$(LECT_TEX_BIN) $^
+	
 %.tex: %.gabc
 	gregorio $<
 	
@@ -111,3 +143,4 @@ clean:
 	rm -f $(ANT_FR_TEX) $(ANT_FR_TEX:.tex=.aux)
 	rm -f $(TIT_PS_FR_TEX) $(TIT_PS_FR_TEX:.tex=.aux)
 	rm -f $(PS_TEX) $(PS_TEX:.tex=.aux)
+	rm -f $(LECT_TEX) $(LECT_TEX:.tex=.aux) 
