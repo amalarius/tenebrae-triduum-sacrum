@@ -26,7 +26,7 @@ sub espace_vertical($) {
 }
 
 sub debut_parallele() {
-	return "\\begin{Parallel}[v]{\\collatin}{\\colvern}\n";
+	return "\\begin{Parallel}[v]{\\colpslatin}{\\colpsvern}\n";
 }
 
 sub fin_parallele() {
