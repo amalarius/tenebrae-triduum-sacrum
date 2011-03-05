@@ -50,11 +50,11 @@
 
 % Paramètrage des entètes
 \fancyhead{} % clear all header fields
-\fancyhead[CE]{\bfseries Office des Ténèbres}
-\fancyhead[CO]{\bfseries Samedi Saint}
+\fancyhead[CE]{\bfseries \uppercase{Office des Ténèbres}}
+\fancyhead[CO]{\bfseries \uppercase{Samedi Saint}}
 \fancyfoot{} % clear all footer fields
 \fancyfoot[LE,RO]{\thepage}
-\fancyfoot[CO,CE]{Schola Saint-Maur}
+\fancyfoot[CO,CE]{\uppercase{Schola Saint-Maur}}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
@@ -84,7 +84,15 @@
 
 \newpage
 
+\fancyhead[CO]{\bfseries \uppercase{Samedi Saint - Premier nocturne}}
+
 \titrenocturne{Premier nocturne.}
+
+\rubrique{On ne chante ni invitatoire, ni hymne, mais on commence directement
+par la première antienne, en se signant les lèvres.}
+
+\rubrique{A la fin de chaque psaume, un des servants éteint l’un des quinze cierges du chandelier
+qui aura été placé en avant de l’autel.}
 
 \titreantienne{Antienne 1.}
 
@@ -133,12 +141,15 @@
 \input{../ps/neo-vulgate/int_ps15_7}
 \input{../ps/neo-vulgate/ps15_7}
 
+\rubriquefinpsaumes
 
 \commentary{\color{red}{\emph{Cf. Ps 21,19}}}
 \nopagebreak
 \includescore{vers_In_pace_in_idipsum.tex}
 
 \input{./fr/vers_In_pace_in_idipsum_fr}
+
+\rubriquefinverset
 
 % Leçon I
 
@@ -183,6 +194,8 @@
 % Deuxième nocturne
 
 \newpage
+
+\fancyhead[CO]{\bfseries \uppercase{Samedi Saint - Deuxième nocturne}}
 
 \titrenocturne{Deuxième nocturne.}
 
@@ -234,6 +247,8 @@
 \input{../ps/neo-vulgate/int_ps29_8}
 \input{../ps/neo-vulgate/ps29_8}
 
+\rubriquefinpsaumes
+
 % Verset
 
 \commentary{\color{red}{\emph{Cf. Ps 40,11}}}
@@ -241,6 +256,8 @@
 \includescore{vers_Tu_autem.tex}
 
 \input{./fr/vers_Tu_autem_fr}
+
+\rubriquefinverset
 
 % Leçon IV
 \titrelecture{Lecture IV.}
@@ -282,6 +299,8 @@
 % Troisième nocturne
 
 \newpage
+
+\fancyhead[CO]{\bfseries \uppercase{Samedi Saint - Troisième nocturne}}
 
 \titrenocturne{Troisième nocturne.}
 
@@ -333,11 +352,16 @@
 \input{../ps/neo-vulgate/int_ps87_4}
 \input{../ps/neo-vulgate/ps87_4}
 
+\rubriquefinpsaumes
+
+% Verset
 \commentary{\color{red}{\emph{Cf. Ps 75,3}}}
 \nopagebreak
 \includescore{vers_In_pace_factus_est.tex}
 
 \input{./fr/vers_In_pace_factus_est_fr}
+
+\rubriquefinverset
 
 % Leçon VII
 \titrelecture{Lecture VII.}
@@ -378,6 +402,8 @@
 % Laudes
 
 \newpage
+
+\fancyhead[CO]{\bfseries \uppercase{Samedi Saint - Laudes}}
 
 \titrelaudes{Laudes}
 
@@ -459,6 +485,10 @@
 \input{../ps/neo-vulgate/int_ps150_8}
 \input{../ps/neo-vulgate/ps150_8}
 
+\textcolor{red}{\itshape On ne dit pas de Lecture Brève, mais au signal du
+cérémoniaire, tous se lèvent et, tournés vers l’autel, répondent au verset
+proclamé par un chantre. L’officiant entonne alors l’antienne du} Benedíctus.
+
 % Verset
 \commentary{\color{red}{\normalsize \emph{Cf. Ps 15, 9.10}}}
 \nopagebreak
@@ -479,6 +509,18 @@
 \input{../ps/neo-vulgate/int_benedictus_1}
 \input{../ps/neo-vulgate/benedictus_1}
 
+\textcolor{red}{\itshape Les cierges du chandelier triangulaire ont été
+successivement éteints. Un seul, placé au sommet du chandelier, est resté allumé.
+Pendant le} Benedíctus, \textcolor{red}{\itshape on éteint les six cierges qui
+brûlent sur l’autel, de chaque côté alternativement, de manière que tous soient
+éteints au dernier verset. On éteint aussi toutes les lumières de l’église.}
+
+\textcolor{red}{\itshape Après la reprise de l’antienne} Mulíeres, %
+\textcolor{red}{\itshape tous se mettent à genoux et chantent le Christus, %
+pendant lequel un des servants retire le cierge resté allumé, et va le dissimuler
+derrière l’autel.}
+
+
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{\Abar.}}}{\scriptsize \textsc{\textbf{\Abar.}}}
 \commentary{\color{red}{\emph{Cf. Phil 2,8-9}}}
 \nopagebreak
@@ -486,12 +528,25 @@
 
 \input{./fr/ant_Christus_fr}
 
+\textcolor{red}{\itshape On garde le silence le temps d’un} Notre Père. %
+\textcolor{red}{\itshape L’officiant lit alors l’oraison sans dire} Orémus, %
+\textcolor{red}{\itshape sur un ton assez grave, en descendant d’un ton sur
+la dernière syllabe et sans conclusion.}
+
+
 % Oraison
+
+\rubrique{L’oraison terminée, on frappe avec bruit sur les stalles, jusqu’à ce que le cierge resté
+allumé soit déposé au sommet du chandelier. Au signal du cérémoniaire, tous se lèvent
+alors et se retirent en silence.}
+
 
 \finoffice
 
 % Annexes
 \newpage
+
+\fancyhead[CO]{\bfseries \uppercase{Samedi Saint - Annexes}}
 
 \begin{appendices}
 

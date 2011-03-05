@@ -3,11 +3,17 @@
 % Inspirées du livret d'exemple de complies bénédictines de Gregorio
 %
 
-\newdimen\collatin
-\collatin=8cm
+\newdimen\colpslatin
+\colpslatin=8cm
 
-\newdimen\colvern
-\colvern=5.7cm
+\newdimen\colpsvern
+\colpsvern=5.7cm
+
+\newdimen\collectlatin
+\collectlatin=5.7cm
+
+\newdimen\collectvern
+\collectvern=5.7cm
 
 \def\latin#1{%
 \selectlanguage{latin}
@@ -81,4 +87,18 @@
 \begin{center}%
 \gresep{2}{40}%
 \end{center}
+}
+
+\def\rubrique#1{%
+\textcolor{red}{\itshape #1}%
+}
+
+\def\rubriquefinpsaumes{%
+\textcolor{red}{\itshape Après la reprise de l’antienne,tous se lèvent et,
+tournés vers l’autel, répondent au verset proclamé par le chantre.}%
+}
+
+\def\rubriquefinverset{%
+\textcolor{red}{\itshape On garde le silence, le temps d’un} Notre Père. %
+\textcolor{red}{\itshape Au signal du cérémoniaire, tous s’assoient.}%
 }
