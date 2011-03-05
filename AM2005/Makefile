@@ -43,19 +43,19 @@ all: $(PDF)
 $(DOCUMENT).pdf : $(DOCUMENT).tex commun.tex $(TEX_GEN_FILES) $(RESP_FR_TEX)\
 	$(ANT_FR_TEX) $(VERS_FR_TEX) $(TIT_PS_FR_TEX) $(PS_TEX)\
 	$(RESP_TEX_BIN) $(PS_TEX_BIN) $(LECT_TEX_BIN) $(TIT_PS_TEX_BIN)
-	lualatex $^
+	lualatex $<
 
 fr/resp%.tex: fr/resp%.txt
-	$(RESP_TEX_BIN) $^
+	$(RESP_TEX_BIN) $<
 	
 fr/ant%.tex: fr/ant%.txt
-	$(RESP_TEX_BIN) $^
+	$(RESP_TEX_BIN) $<
 
 fr/vers%.tex: fr/vers%.txt
-	$(RESP_TEX_BIN) $^
+	$(RESP_TEX_BIN) $<
 	
 ../ps/fr/tit_%_fr.tex: ../ps/fr/tit_%_fr.txt
-	$(TIT_PS_TEX_BIN) $^
+	$(TIT_PS_TEX_BIN) $<
 
 ../ps/neo-vulgate/at23_2.tex: ../ps/neo-vulgate/at23_2.txt ../ps/fr/at23_fr.txt
 	$(PS_TEX_BIN) -2 $^
@@ -103,10 +103,10 @@ fr/vers%.tex: fr/vers%.txt
 	$(PS_TEX_BIN) -2 $^
 	
 %.tex: %.gabc
-	gregorio $^
+	gregorio $<
 	
 clean:
-	rm -f $(TEX_GEN_FILES) $(PDF) *~ *.log *.aux *.gaux *~
+	rm -f $(TEX_GEN_FILES) $(PDF) *~ *.log *.aux *.gaux
 	rm -f $(RESP_FR_TEX) $(RESP_FR_TEX:.tex=.aux)
 	rm -f $(ANT_FR_TEX) $(ANT_FR_TEX:.tex=.aux)
 	rm -f $(TIT_PS_FR_TEX) $(TIT_PS_FR_TEX:.tex=.aux)
