@@ -32,8 +32,8 @@ PS_TEX=$(PS_TXT:.txt=.tex)
 TIT_PS_FR_TXT=$(wildcard ../ps/fr/tit_*_fr.txt)
 TIT_PS_FR_TEX=$(TIT_PS_FR_TXT:.txt=.tex)
 
-LECT_LT_TXT=$(wildcard ../lect/lect_*_lt.txt) $(wildcard ../lect/LH/lt/lect_*_lt.txt)
-LECT_FR_TXT=$(wildcard ../lect/lect_*_fr.txt) $(wildcard ../lect/LH/fr/lect_*_fr.txt)
+LECT_LT_TXT=$(wildcard ../lect/lt/lect_*_lt.txt) $(wildcard ../lect/LH/lt/lect_*_lt.txt)
+LECT_FR_TXT=$(wildcard ../lect/fr/lect_*_fr.txt) $(wildcard ../lect/LH/fr/lect_*_fr.txt)
 LECT_TEX=$(LECT_LT_TXT:.txt=.tex)
 
 ORA_TXT=oratio.txt
