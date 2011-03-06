@@ -116,13 +116,13 @@ fr/vers%.tex: fr/vers%.txt
 ../ps/neo-vulgate/benedictus_1.tex: ../ps/neo-vulgate/benedictus_1.txt ../ps/fr/benedictus_fr.txt
 	$(PS_TEX_BIN) -2 $^
 	
-../lect/lect_I_lt.tex: ../lect/lect_I_lt.txt ../lect/lect_I_fr.txt
+../lect/lt/lect_I_lt.tex: ../lect/lt/lect_I_lt.txt ../lect/fr/lect_I_fr.txt
 	$(LECT_TEX_BIN) -t $^
 	
-../lect/lect_II_lt.tex: ../lect/lect_II_lt.txt ../lect/lect_II_fr.txt
+../lect/lt/lect_II_lt.tex: ../lect/lt/lect_II_lt.txt ../lect/fr/lect_II_fr.txt
 	$(LECT_TEX_BIN) $^
 	
-../lect/lect_III_lt.tex: ../lect/lect_III_lt.txt ../lect/lect_III_fr.txt
+../lect/lt/lect_III_lt.tex: ../lect/lt/lect_III_lt.txt ../lect/fr/lect_III_fr.txt
 	$(LECT_TEX_BIN) $^
 
 ../lect/LH/lt/lect_IV_lt.tex: ../lect/LH/lt/lect_IV_lt.txt ../lect/LH/fr/lect_IV_fr.txt
