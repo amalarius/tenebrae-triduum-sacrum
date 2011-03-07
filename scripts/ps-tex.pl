@@ -93,6 +93,8 @@ print $fh_tex debut_parallele();
 while (defined($ligne = <$fh_ps>)) {
 	chomp $ligne;
 	
+	last if ($ligne =~ /^\s*$/);
+	
 	# On indique le début de la psalmodie par une flêche, au deuxième verset
 	#if (! defined($opt_2) && $nb == 2) {
 	#	$ligne = '\textcolor{red}{\large{\textrightarrow}} ' . $ligne;

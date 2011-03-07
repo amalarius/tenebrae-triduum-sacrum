@@ -11,8 +11,10 @@ initial-style: 0;
 
 %%
 (c3)
-~1.~N{ó}(hg) tus(hi) in(i) Jud(i)<b><sp>'ae</sp></b>(k jr)a(j) 
-<b>Dé</b>(i jr)us~:(j. ) ~*(:) in(i) Is(i)ra(i)el(i) má(i)gnum(i) 
-<b>nó</b>(j ir z)men(i) <b>é</b>(h hr)ius.(gf.) (::)
+~1.~N{ó}(hg) tus(hi) in(i) <b>Iu</b>(k)dæ(j jr)a(j) 
+<b>De</b>(i jr)us~:(j. ) ~*(:) in(i) Is(i)ra(i)el(i) ma(i)gnum(i) 
+<b>no</b>(j ir z)men(i) <b>e</b>(h hr)ius.(gf.)
+
+<i>Fl</i>{<i>e</i>}<i>xus~:</i>(::) cor(i)de,~<sp>+</sp>(h.  i i i) (::)
 
 % vim: se enc=utf8 fenc=utf8 digraph syn=gabc:

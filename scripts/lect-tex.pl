@@ -133,11 +133,11 @@ if (defined($opt_t)) {
 	# Titre
 	$ligne = <$fh>;
 	chomp $ligne;
-	print $fh_tex colonne_gauche(texte_centre(texte_large($ligne))), "\n";
+	print $fh_tex colonne_gauche(texte_centre(texte_gras(texte_large($ligne)))), "\n";
 	
 	$ligne = <$fh_vern>;
 	chomp $ligne;
-	print $fh_tex colonne_droite(texte_centre(texte_large($ligne))), "\n";
+	print $fh_tex colonne_droite(texte_centre(texte_gras(texte_large($ligne)))), "\n";
 }
 
 # Sous-titre s'il y en a
@@ -173,6 +173,7 @@ while (defined($ligne = <$fh>)) {
 	print $fh_tex debut_colonne_gauche();
 	do {
 		chomp $ligne;
+		
 		print $fh_tex $ligne, "\n";
 	}
 	while (defined($ligne = <$fh>) && ($ligne !~ /^\s*\n{0,1}$/));
@@ -180,10 +181,12 @@ while (defined($ligne = <$fh>)) {
 	
 	# Colonne droite
 	print $fh_tex debut_colonne_droite();
+	print $fh_tex debut_texte_italique();
 	while (defined($ligne = <$fh_vern>) && ($ligne !~ /^\s*\n{0,1}$/)) {
 		chomp $ligne;
 		print $fh_tex $ligne, "\n";
 	}
+	print $fh_tex fin_block();
 	print $fh_tex fin_block();
 	
 	if (defined($ligne)) {
