@@ -92,7 +92,7 @@ fr/vers%.tex: fr/vers%.txt
 ../ps/neo-vulgate/ps29_8.tex: ../ps/neo-vulgate/ps29_8.txt ../ps/fr/ps29_fr.txt
 	$(PS_TEX_BIN) -2 $^
 	
-../ps/neo-vulgate/ps50_2*.tex: ../ps/neo-vulgate/ps50_2*.txt ../ps/fr/ps50_fr.txt
+../ps/neo-vulgate/ps50_2_etoile.tex: ../ps/neo-vulgate/ps50_2_etoile.txt ../ps/fr/ps50_fr.txt
 	$(PS_TEX_BIN) -2 $^
 
 ../ps/neo-vulgate/ps53_8.tex: ../ps/neo-vulgate/ps53_8.txt ../ps/fr/ps53_fr.txt
@@ -107,7 +107,7 @@ fr/vers%.tex: fr/vers%.txt
 ../ps/neo-vulgate/ps87_4.tex: ../ps/neo-vulgate/ps87_4.txt ../ps/fr/ps87_fr.txt
 	$(PS_TEX_BIN) -2 $^
 
-../ps/neo-vulgate/ps91_2*.tex: ../ps/neo-vulgate/ps91_2*.txt ../ps/fr/ps91_fr.txt
+../ps/neo-vulgate/ps91_2_etoile.tex: ../ps/neo-vulgate/ps91_2_etoile.txt ../ps/fr/ps91_fr.txt
 	$(PS_TEX_BIN) -2 $^
 
 ../ps/neo-vulgate/ps150_8.tex: ../ps/neo-vulgate/ps150_8.txt ../ps/fr/ps150_fr.txt
