@@ -102,13 +102,13 @@ while (defined($ligne = <$fh_ps>)) {
 	
 	## A gauche, la psalmodie latine	
 	# Signe de croix
-	$ligne =~ s/=\|=/\\textcolor\{red\}\{\\grecross\}/g;
+	$ligne =~ s/\s=\|=/\\textcolor\{red\}\{\\grecross\}/g;
 	
 	# Flexe
-	$ligne =~ s/\+/{\\color{red} \\dagger}/g;
+	$ligne =~ s/\s\+/~{\\color{red} \\dagger}/g;
 	
 	# Mediante, plus passage à la ligne
-	$ligne =~ s/\*/{\\color{red} \\greheightstar}\n/g;
+	$ligne =~ s/\s\*/~{\\color{red} \\greheightstar}\n/g;
 	
 	# Syllabes préparatoires en italique
 	$ligne =~ s|/([^/]*?)/|\\textit{$1}|g;
