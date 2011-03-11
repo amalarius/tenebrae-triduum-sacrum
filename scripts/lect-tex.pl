@@ -144,7 +144,7 @@ if (defined($opt_t)) {
 if (defined($opt_t)) {
 	$ligne = <$fh>;
 	chomp $ligne;
-	if ($ligne !~ /^\s+$/) {
+	if ($ligne !~ /^\s*$/) {
 		print $fh_tex colonne_gauche(texte_centre(texte_italique($ligne))), "\n";
 	
 		$ligne = <$fh_vern>;
