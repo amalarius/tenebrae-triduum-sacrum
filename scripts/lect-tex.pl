@@ -82,6 +82,16 @@ sub espace_deux_colonnes($) {
 	return "\\twocolspace{$dim}\n";
 }
 
+sub minipage_gauche($) {
+	my ($texte) = @_;
+	return "\\begin{minipage}{\\ParallelLWidth}$texte\\end{minipage}";
+}
+
+sub minipage_droite($) {
+	my ($texte) = @_;
+	return "\\begin{minipage}{\\ParallelRWidth}$texte\\end{minipage}";
+}
+
 # Programme principal
 
 sub usage() {
@@ -133,11 +143,11 @@ if (defined($opt_t)) {
 	# Titre
 	$ligne = <$fh>;
 	chomp $ligne;
-	print $fh_tex colonne_gauche(texte_centre(texte_gras(texte_large($ligne)))), "\n";
+	print $fh_tex colonne_gauche(minipage_gauche(texte_centre(texte_gras(texte_large($ligne))))), "\n";
 	
 	$ligne = <$fh_vern>;
 	chomp $ligne;
-	print $fh_tex colonne_droite(texte_centre(texte_gras(texte_large($ligne)))), "\n";
+	print $fh_tex colonne_droite(minipage_droite(texte_centre(texte_gras(texte_large($ligne))))), "\n";
 }
 
 # Sous-titre s'il y en a
@@ -145,11 +155,12 @@ if (defined($opt_t)) {
 	$ligne = <$fh>;
 	chomp $ligne;
 	if ($ligne !~ /^\s*$/) {
-		print $fh_tex colonne_gauche(texte_centre(texte_italique($ligne))), "\n";
+		print $fh_tex espace_deux_colonnes("0.4cm"), "\n";
+		print $fh_tex colonne_gauche(minipage_gauche(texte_centre(texte_italique($ligne)))), "\n";
 	
 		$ligne = <$fh_vern>;
 		chomp $ligne;
-		print $fh_tex colonne_droite(texte_centre(texte_italique($ligne))), "\n";
+		print $fh_tex colonne_droite(minipage_droite(texte_centre(texte_italique($ligne)))), "\n";
 		
 		# Ligne vide
 		$ligne = <$fh>;
