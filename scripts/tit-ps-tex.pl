@@ -3,7 +3,6 @@
 # Formattage du titre de psaume
 
 use strict;
-use utf8;
 use Getopt::Std;
 
 # Programme principal

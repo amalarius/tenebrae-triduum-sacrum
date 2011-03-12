@@ -3,7 +3,6 @@
 # Conversion de la traduction vernaculaire du répons en fichier latex formatté
 
 use strict;
-use utf8;
 use Getopt::Std;
 
 sub debut_block_italique {

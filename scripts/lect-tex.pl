@@ -3,7 +3,6 @@
 # Programme de formattage de texte latin/vernaculaire sur deux colonnes
 
 use strict;
-use utf8;
 use Getopt::Std;
 
 sub debut_parallele() {
@@ -184,6 +183,9 @@ while (defined($ligne = <$fh>)) {
 	print $fh_tex debut_colonne_gauche();
 	do {
 		chomp $ligne;
+		
+		$ligne =~ s/'æ/\\'æ/g;
+		$ligne =~ s/'œ/\\'œ/g;
 		
 		print $fh_tex $ligne, "\n";
 	}

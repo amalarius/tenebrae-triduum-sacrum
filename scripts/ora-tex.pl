@@ -3,7 +3,6 @@
 # Programme de formattage de texte latin/vernaculaire sur deux colonnes
 
 use strict;
-use utf8;
 use Getopt::Std;
 
 sub debut_parallele() {
