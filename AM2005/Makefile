@@ -157,3 +157,4 @@ clean:
 	rm -f $(PS_TEX) $(PS_TEX:.tex=.aux)
 	rm -f $(LECT_TEX) $(LECT_TEX:.tex=.aux)
 	rm -f $(ORA_TEX) $(ORA_TEX:.tex=.aux)
+	rm -f $(VERS_FR_TEX) $(VERS_FR_TEX:.tex=.aux)
