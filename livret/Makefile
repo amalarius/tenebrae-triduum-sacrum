@@ -6,8 +6,8 @@ TIT_PS_TEX_BIN=../scripts/tit-ps-tex.pl
 ORA_TEX_BIN=../scripts/ora-tex.pl
 
 # Fichiers gabc à compiler
-GABC_FILES=$(wildcard ../commun/*.gabc)\
-	$(wildcard ../AM2005/*.gabc) $(wildcard ../lect/*.gabc)\
+GABC_FILES=$(wildcard ../commun/*.gabc) $(wildcard ../AM2005/*.gabc)\
+	$(wildcard ../800/*.gabc) $(wildcard ../lect/*.gabc)\
 	$(wildcard ../lect/LH/*.gabc) $(wildcard ../ps/neo-vulgate/*.gabc)
 TEX_GEN_FILES=$(GABC_FILES:.gabc=.tex)
 
