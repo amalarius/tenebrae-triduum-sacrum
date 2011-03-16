@@ -4,16 +4,16 @@
 %
 
 \newdimen\colpslatin
-\colpslatin=8cm
+\setlength{\colpslatin}{\textwidth * \real{0.48}}
 
 \newdimen\colpsvern
-\colpsvern=5.7cm
+\setlength{\colpsvern}{\textwidth * \real{0.48}}
 
 \newdimen\collectlatin
-\collectlatin=7cm
+\setlength{\collectlatin}{\textwidth * \real{0.48}}
 
 \newdimen\collectvern
-\collectvern=7cm
+\setlength{\collectvern}{\textwidth * \real{0.48}}
 
 \def\latin#1{%
 \selectlanguage{latin}
@@ -72,7 +72,7 @@
 
 \def\titrerepons#1{%
 \begin{center}%
-\Large{#1}%
+\large{\uppercase{#1}}%
 \end{center}%
 }
 
@@ -102,7 +102,7 @@
 
 \def\finoffice{%
 \begin{center}%
-\gresep{2}{40}%
+\gresep{2}{35}%
 \end{center}
 }
 
@@ -122,7 +122,7 @@ tournés vers l’autel, répondent au verset proclamé par le chantre.}%
 
 \def\reflect#1{%
 \textcolor{red}{\itshape Pour la notation grégorienne de la lecture, on se %
-reportera aux annexes, page}~\pageref{#1}.%
+reportera aux annexes, page} \pageref{#1}.%
 }
 
 \def\espaceapresintonation{%
