@@ -34,12 +34,12 @@ sub fin_parallele() {
 
 sub colonne_gauche($) {
 	my ($texte) = @_;
-	return "\\latin{$texte}";
+	return "\\latin{$texte}\n";
 }
 
 sub colonne_droite($) {
 	my ($texte) = @_;
-	return "\\vern{$texte}";
+	return "\\vern{$texte}\n";
 }
 
 # Programme principal
@@ -81,7 +81,7 @@ if (defined($opt_2)) {
 	
 	$ligne = <$fh_vern>;
 	chomp $ligne;
-	print $fh_tex texte_italique($ligne);
+	print $fh_tex texte_italique($ligne), "\n";
 }
 
 ## Maintenant, lecture parallèle des deux fichiers et composition de la sortie
@@ -104,10 +104,10 @@ while (defined($ligne = <$fh_ps>)) {
 	$ligne =~ s/\s=\|=/\\textcolor\{red\}\{\\grecross\}/g;
 	
 	# Flexe
-	$ligne =~ s/\s\+/~{\\color{red} \\dagger}/g;
+	$ligne =~ s/\s\+/~{\\color\{red\} \\gredagger}/g;
 	
 	# Mediante, plus passage à la ligne
-	$ligne =~ s/\s\*/~{\\color{red} \\greheightstar}\\\\\n/g;
+	$ligne =~ s/\s\*/~{\\color\{red\} \\greheightstar}\\\\\n/g;
 	
 	# Syllabes préparatoires en italique
 	$ligne =~ s|/([^/]*?)/|\\textit{$1}|g;
