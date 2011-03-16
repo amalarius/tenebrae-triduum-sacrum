@@ -29,6 +29,9 @@
 \usepackage{txfonts}
 \usepackage{textcomp}
 
+%\usepackage{fontspec}
+%\usepackage{libertine}
+
 \pagestyle{fancy}
 %\voffset=-1.5cm
 %\hoffset=-1.5cm
@@ -42,9 +45,11 @@
 \floatstyle{plain}
 \newfloat{piece}{H}
 
-\input commun.tex
+\input ../commun/commun.tex
 
 \begin{document}
+%\setmainfont[Mapping=tex−text]{Linux Libertine O}%
+
 % Debug : affichage des paramètres du layout
 %\layout*
 
@@ -99,9 +104,9 @@ qui aura été placé en avant de l’autel.}
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{1 \Abar. VIII g}}}{\scriptsize \textsc{\textbf{1 \Abar. VIII g}}}
 \commentary{\color{red}{\emph{Cf. Ps 4,9}}}
 \nopagebreak
-\includescore{ant_In_pace.tex}
+\includescore{../AM2005/ant_In_pace.tex}
 \nopagebreak
-\input{./fr/ant_In_pace_fr}
+\input{../commun/fr/ant_In_pace_fr}
 
 % Psaume 4
 
@@ -116,9 +121,9 @@ qui aura été placé en avant de l’autel.}
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{2 \Abar. IV e}}}{\scriptsize \textsc{\textbf{2 \Abar. IV e}}}
 \commentary{\color{red}{\emph{Cf. Ps 14,1}}}
 \nopagebreak
-\includescore{ant_Habitabit.tex}
+\includescore{../AM2005/ant_Habitabit.tex}
 \nopagebreak
-\input{./fr/ant_Habitabit_fr}
+\input{../commun/fr/ant_Habitabit_fr}
 
 % Psaume 14
 \input{../ps/fr/tit_ps14_fr}
@@ -132,9 +137,9 @@ qui aura été placé en avant de l’autel.}
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{3 \Abar. VII c}}}{\scriptsize \textsc{\textbf{3 \Abar. VII c}}}
 \commentary{\color{red}{\emph{Cf. Ps 15,9}}}
 \nopagebreak
-\includescore{ant_Caro_mea.tex}
+\includescore{../AM2005/ant_Caro_mea.tex}
 \nopagebreak
-\input{./fr/ant_Caro_mea_fr}
+\input{../commun/fr/ant_Caro_mea_fr}
 
 % Psaume 15
 \input{../ps/fr/tit_ps15_fr}
@@ -145,9 +150,9 @@ qui aura été placé en avant de l’autel.}
 
 \commentary{\color{red}{\emph{Cf. Ps 21,19}}}
 \nopagebreak
-\includescore{vers_In_pace_in_idipsum.tex}
+\includescore{../commun/vers_In_pace_in_idipsum.tex}
 \nopagebreak
-\input{./fr/vers_In_pace_in_idipsum_fr}
+\input{../commun/fr/vers_In_pace_in_idipsum_fr}
 
 \rubriquefinverset
 
@@ -166,9 +171,9 @@ qui aura été placé en avant de l’autel.}
 \commentary{\color{red}{\emph{Cf. Mt 27,62.67}}}
 \nopagebreak
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{II}}}{\scriptsize \textsc{\textbf{II}}}
-\includescore{resp_Sepulto.tex}
+\includescore{../AM2005/resp_Sepulto.tex}
 \nopagebreak
-\input{./fr/resp_Sepulto_fr}
+\input{../commun/fr/resp_Sepulto_fr}
 
 % Leçon II
 
@@ -183,9 +188,9 @@ qui aura été placé en avant de l’autel.}
 \titrerepons{Répons 2.}
 \nopagebreak
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{V}}}{\scriptsize \textsc{\textbf{V}}}
-\includescore{resp_Ierusalem.tex}
+\includescore{../AM2005/resp_Ierusalem.tex}
 \nopagebreak
-\input{./fr/resp_Ierusalem_fr}
+\input{../commun/fr/resp_Ierusalem_fr}
 
 % Leçon III
 \titrelecture{Lecture III.}
@@ -201,9 +206,9 @@ qui aura été placé en avant de l’autel.}
 \commentary{\color{red}{\emph{Cf. Mt 26,38.45}}}
 \nopagebreak
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{V}}}{\scriptsize \textsc{\textbf{V}}}
-\includescore{resp_Plange.tex}
+\includescore{../AM2005/resp_Plange.tex}
 \nopagebreak
-\input{./fr/resp_Plange_fr}
+\input{../commun/fr/resp_Plange_fr}
 
 \rubrique{On garde le silence un instant. Au signal du cérémoniaire, tous se lèvent,
  et on entonne la première antienne du deuxième nocturne.}
@@ -225,9 +230,9 @@ qui aura été placé en avant de l’autel.}
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{1 \Abar. V a}}}{\scriptsize \textsc{\textbf{1 \Abar. V a}}}
 \commentary{\color{red}{\emph{Cf. Ps. 23,9}}}
 \nopagebreak
-\includescore{ant_Elevamini.tex}
+\includescore{../AM2005/ant_Elevamini.tex}
 \nopagebreak
-\input{./fr/ant_Elevamini_fr}
+\input{../commun/fr/ant_Elevamini_fr}
 
 % Psaume 23
 \input{../ps/fr/tit_ps23_fr}
@@ -241,9 +246,9 @@ qui aura été placé en avant de l’autel.}
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{2 \Abar. IV e}}}{\scriptsize \textsc{\textbf{2 \Abar. IV e}}}
 \commentary{\color{red}{\emph{Cf. Ps 26, 13}}}
 \nopagebreak
-\includescore{ant_Credo_videre.tex}
+\includescore{../AM2005/ant_Credo_videre.tex}
 \nopagebreak
-\input{./fr/ant_Credo_videre_fr}
+\input{../commun/fr/ant_Credo_videre_fr}
 
 % Psaume 26
 \input{../ps/fr/tit_ps26_fr}
@@ -257,9 +262,9 @@ qui aura été placé en avant de l’autel.}
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{3 \Abar. VIII g}}}{\scriptsize \textsc{\textbf{3 \Abar. VIII g}}}
 \commentary{\color{red}{\emph{Cf. Ps. 29,4}}}
 \nopagebreak
-\includescore{ant_Domine_abstraxisti.tex}
+\includescore{../AM2005/ant_Domine_abstraxisti.tex}
 \nopagebreak
-\input{./fr/ant_Domine_abstraxisti_fr}
+\input{../commun/fr/ant_Domine_abstraxisti_fr}
 
 % Psaume 29
 \input{../ps/fr/tit_ps29_fr}
@@ -272,9 +277,9 @@ qui aura été placé en avant de l’autel.}
 
 \commentary{\color{red}{\emph{Cf. Ps 40,11}}}
 \nopagebreak
-\includescore{vers_Tu_autem.tex}
+\includescore{../commun/vers_Tu_autem.tex}
 \nopagebreak
-\input{./fr/vers_Tu_autem_fr}
+\input{../commun/fr/vers_Tu_autem_fr}
 
 \rubriquefinverset
 
@@ -290,9 +295,9 @@ qui aura été placé en avant de l’autel.}
 \titrerepons{Répons 4.}
 \nopagebreak
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{VII}}}{\scriptsize \textsc{\textbf{VII}}}
-\includescore{resp_Recessit.tex}
+\includescore{../AM2005/resp_Recessit.tex}
 \nopagebreak
-\input{./fr/resp_Recessit_fr}
+\input{../commun/fr/resp_Recessit_fr}
 
 % Leçon V
 \titrelecture{Lecture V.}
@@ -308,9 +313,9 @@ qui aura été placé en avant de l’autel.}
 \commentary{\color{red}{\emph{Cf. Mt 26,55}}}
 \nopagebreak
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{VIII}}}{\scriptsize \textsc{\textbf{VIII}}}
-\includescore{resp_O_vos_omnes.tex}
+\includescore{../AM2005/resp_O_vos_omnes.tex}
 \nopagebreak
-\input{./fr/resp_O_vos_omnes_fr}
+\input{../commun/fr/resp_O_vos_omnes_fr}
 
 % Leçon VI
 \titrelecture{Lecture VI.}
@@ -326,9 +331,9 @@ qui aura été placé en avant de l’autel.}
 \commentary{\color{red}{\emph{Cf. Is 57,1; 53,7-8}}}
 \nopagebreak
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{IV}}}{\scriptsize \textsc{\textbf{IV}}}
-\includescore{resp_Ecce.tex}
+\includescore{../AM2005/resp_Ecce.tex}
 \nopagebreak
-\input{./fr/resp_Ecce_fr}
+\input{../commun/fr/resp_Ecce_fr}
 
 \rubrique{On garde le silence un instant. Au signal du cérémoniaire, tous se lèvent,
  et on entonne la première antienne du troisième nocturne.}
@@ -350,9 +355,9 @@ qui aura été placé en avant de l’autel.}
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{1 \Abar. VIII g}}}{\scriptsize \textsc{\textbf{1 \Abar. VIII g}}}
 \commentary{\color{red}{\emph{Cf. Ps 53, 6}}}
 \nopagebreak
-\includescore{ant_Deus_adiuvat_me.tex}
+\includescore{../AM2005/ant_Deus_adiuvat_me.tex}
 \nopagebreak
-\input{./fr/ant_Deus_adiuvat_me_fr}
+\input{../commun/fr/ant_Deus_adiuvat_me_fr}
 
 % Psaume 53
 \input{../ps/fr/tit_ps53_fr}
@@ -366,9 +371,9 @@ qui aura été placé en avant de l’autel.}
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{2 \Abar. VII a}}}{\scriptsize \textsc{\textbf{2 \Abar. VII a}}}
 \commentary{\color{red}{\emph{Cf. Ps 75,3}}}
 \nopagebreak
-\includescore{ant_In_pace_factus_est.tex}
+\includescore{../AM2005/ant_In_pace_factus_est.tex}
 \nopagebreak
-\input{./fr/ant_In_pace_factus_est_fr}
+\input{../commun/fr/ant_In_pace_factus_est_fr}
 
 % Psaume 75
 \input{../ps/fr/tit_ps75_fr}
@@ -382,9 +387,9 @@ qui aura été placé en avant de l’autel.}
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{3 \Abar. IV d}}}{\scriptsize \textsc{\textbf{3 \Abar. IV d}}}
 \commentary{\color{red}{\emph{Cf. Ps 87,5-6}}}
 \nopagebreak
-\includescore{ant_Factus_sum.tex}
+\includescore{../AM2005/ant_Factus_sum.tex}
 \nopagebreak
-\input{./fr/ant_Factus_sum_fr}
+\input{../commun/fr/ant_Factus_sum_fr}
 
 % Psaume 87
 \input{../ps/fr/tit_ps87_fr}
@@ -396,9 +401,9 @@ qui aura été placé en avant de l’autel.}
 % Verset
 \commentary{\color{red}{\emph{Cf. Ps 75,3}}}
 \nopagebreak
-\includescore{vers_In_pace_factus_est.tex}
+\includescore{../commun/vers_In_pace_factus_est.tex}
 \nopagebreak
-\input{./fr/vers_In_pace_factus_est_fr}
+\input{../commun/fr/vers_In_pace_factus_est_fr}
 
 \rubriquefinverset
 
@@ -415,9 +420,9 @@ qui aura été placé en avant de l’autel.}
 \commentary{\color{red}{\emph{Cf. Ps 87, 5.6.7}}}
 \nopagebreak
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{IV}}}{\scriptsize \textsc{\textbf{IV}}}
-\includescore{resp_Aestimatus_sum.tex}
+\includescore{../AM2005/resp_Aestimatus_sum.tex}
 \nopagebreak
-\input{./fr/resp_Aestimatus_sum_fr}
+\input{../commun/fr/resp_Aestimatus_sum_fr}
 
 % Leçon VIII
 \titrelecture{Lecture VIII.}
@@ -432,9 +437,9 @@ qui aura été placé en avant de l’autel.}
 \commentary{\color{red}{\emph{Cf. Ps 2,2.1}}}
 \nopagebreak
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{IV}}}{\scriptsize \textsc{\textbf{IV}}}
-\includescore{resp_Astiterunt.tex}
+\includescore{../AM2005/resp_Astiterunt.tex}
 \nopagebreak
-\input{./fr/resp_Astiterunt_fr}
+\input{../commun/fr/resp_Astiterunt_fr}
 
 % Leçon IX
 \titrelecture{Lecture IX.}
@@ -449,9 +454,9 @@ qui aura été placé en avant de l’autel.}
 \commentary{\color{red}{\emph{Cf. Is 53,7.41}}}
 \nopagebreak
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{IV}}}{\scriptsize \textsc{\textbf{IV}}}
-\includescore{resp_Sicut_ovis.tex}
+\includescore{../AM2005/resp_Sicut_ovis.tex}
 \nopagebreak
-\input{./fr/resp_Sicut_ovis_fr}
+\input{../commun/fr/resp_Sicut_ovis_fr}
 
 \rubrique{On garde le silence un instant. Au signal du cérémoniaire, tous se lèvent et se
 tournent vers l’autel. L’officiant entonne la première antienne des Laudes, et tous se
@@ -474,9 +479,9 @@ signent.}
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{1 \Abar. II* d}}}{\scriptsize \textsc{\textbf{1 \Abar. II* d}}}
 \commentary{\color{red}{\emph{Cf. Rom 8,32}}}
 \nopagebreak
-\includescore{ant_O_mors.tex}
+\includescore{../AM2005/ant_O_mors.tex}
 \nopagebreak
-\input{./fr/ant_O_mors_fr}
+\input{../commun/fr/ant_O_mors_fr}
 
 % Psaume 50
 \input{../ps/fr/tit_ps50_fr}
@@ -490,9 +495,9 @@ signent.}
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{2 \Abar. II* a}}}{\scriptsize \textsc{\textbf{2 \Abar. II* a}}}
 \commentary{\color{red}{\emph{Cf. Za 12,10}}}
 \nopagebreak
-\includescore{ant_Plangent_eum.tex}
+\includescore{../AM2005/ant_Plangent_eum.tex}
 \nopagebreak
-\input{./fr/ant_Plangent_eum_fr}
+\input{../commun/fr/ant_Plangent_eum_fr}
 
 % Psaume 91
 \input{../ps/fr/tit_ps91_fr}
@@ -506,9 +511,9 @@ signent.}
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{3 \Abar. VII b}}}{\scriptsize \textsc{\textbf{3 \Abar. VII b}}}
 \commentary{\color{red}{\emph{Cf. Lm 1, 18}}}
 \nopagebreak
-\includescore{ant_Attendite.tex}
+\includescore{../AM2005/ant_Attendite.tex}
 \nopagebreak
-\input{./fr/ant_Attendite_fr}
+\input{../commun/fr/ant_Attendite_fr}
 
 % Psaume 63
 \input{../ps/fr/tit_ps63_fr}
@@ -520,9 +525,9 @@ signent.}
 \titreantienne{Antienne 4.}
 \nopagebreak
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{4 \Abar. II d}}}{\scriptsize \textsc{\textbf{4 \Abar. II d}}}
-\includescore{ant_A_porta_inferi.tex}
+\includescore{../AM2005/ant_A_porta_inferi.tex}
 \nopagebreak
-\input{./fr/ant_A_porta_inferi_fr}
+\input{../commun/fr/ant_A_porta_inferi_fr}
 
 % Psaume AT23
 \input{../ps/fr/tit_at23_fr}
@@ -536,9 +541,9 @@ signent.}
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{5 \Abar. VIII c}}}{\scriptsize \textsc{\textbf{5 \Abar. VIII c}}}
 \commentary{\color{red}{\emph{Cf. Lm 1,12}}}
 \nopagebreak
-\includescore{ant_O_vos_omnes.tex}
+\includescore{../AM2005/ant_O_vos_omnes.tex}
 \nopagebreak
-\input{./fr/ant_O_vos_omnes_fr}
+\input{../commun/fr/ant_O_vos_omnes_fr}
 
 % Psaume 150
 \input{../ps/fr/tit_ps150_fr}
@@ -552,18 +557,18 @@ proclamé par un chantre. L’officiant entonne alors l’antienne du} Benedíct
 % Verset
 \commentary{\color{red}{\normalsize \emph{Cf. Ps 15, 9.10}}}
 \nopagebreak
-\includescore{vers_Caro_mea.tex}
+\includescore{../commun/vers_Caro_mea.tex}
 \nopagebreak
-\input{./fr/vers_Caro_mea_fr}
+\input{../commun/fr/vers_Caro_mea_fr}
 
 % Antienne du Benedictus
 
 \titreantienne{Antienne du Benedictus.}
 \nopagebreak
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{\Abar. I g}}}{\scriptsize \textsc{\textbf{\Abar. I g}}}
-\includescore{ant_Mulieres.tex}
+\includescore{../AM2005/ant_Mulieres.tex}
 \nopagebreak
-\input{./fr/ant_Mulieres_fr}
+\input{../commun/fr/ant_Mulieres_fr}
 
 % Benedictus
 \begin{center}
@@ -590,9 +595,9 @@ derrière l’autel.}
 \gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{\Abar.}}}{\scriptsize \textsc{\textbf{\Abar.}}}
 \commentary{\color{red}{\emph{Cf. Phil 2,8-9}}}
 \nopagebreak
-\includescore{ant_Christus.tex}
+\includescore{../AM2005/ant_Christus.tex}
 \nopagebreak
-\input{./fr/ant_Christus_fr}
+\input{../commun/fr/ant_Christus_fr}
 
 \textcolor{red}{\itshape On garde le silence le temps d’un} Notre Père. %
 \textcolor{red}{\itshape L’officiant lit alors l’oraison sans dire} Orémus, %
@@ -605,7 +610,7 @@ la dernière syllabe et sans conclusion.}
 \textbf{Oraison.}
 \end{center}
 
-\input{oratio}
+\input{../commun/oratio}
 
 \rubrique{L’oraison terminée, on frappe avec bruit sur les stalles, jusqu’à ce que le cierge resté
 allumé soit déposé au sommet du chandelier. Au signal du cérémoniaire, tous se lèvent

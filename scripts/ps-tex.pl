@@ -107,7 +107,7 @@ while (defined($ligne = <$fh_ps>)) {
 	$ligne =~ s/\s\+/~{\\color{red} \\dagger}/g;
 	
 	# Mediante, plus passage à la ligne
-	$ligne =~ s/\s\*/~{\\color{red} \\greheightstar}\n/g;
+	$ligne =~ s/\s\*/~{\\color{red} \\greheightstar}\\\\\n/g;
 	
 	# Syllabes préparatoires en italique
 	$ligne =~ s|/([^/]*?)/|\\textit{$1}|g;

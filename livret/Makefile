@@ -6,17 +6,18 @@ TIT_PS_TEX_BIN=../scripts/tit-ps-tex.pl
 ORA_TEX_BIN=../scripts/ora-tex.pl
 
 # Fichiers gabc à compiler
-GABC_FILES=$(wildcard *.gabc) $(wildcard ../lect/*.gabc)\
+GABC_FILES=$(wildcard ../commun/*.gabc)\
+	$(wildcard ../AM2005/*.gabc) $(wildcard ../lect/*.gabc)\
 	$(wildcard ../lect/LH/*.gabc) $(wildcard ../ps/neo-vulgate/*.gabc)
 TEX_GEN_FILES=$(GABC_FILES:.gabc=.tex)
 
 ### Fichiers à transformer
 # Traduction de répons et antiennes
-RESP_FR_TXT=$(wildcard fr/resp_*.txt)
+RESP_FR_TXT=$(wildcard ../commun/fr/resp_*.txt)
 RESP_FR_TEX=$(RESP_FR_TXT:.txt=.tex)
-ANT_FR_TXT=$(wildcard fr/ant_*.txt)
+ANT_FR_TXT=$(wildcard ../commun/fr/ant_*.txt)
 ANT_FR_TEX=$(ANT_FR_TXT:.txt=.tex)
-VERS_FR_TXT=$(wildcard fr/vers_*.txt)
+VERS_FR_TXT=$(wildcard ../commun/fr/vers_*.txt)
 VERS_FR_TEX=$(VERS_FR_TXT:.txt=.tex)
 
 # Psaumes latin/français
@@ -36,8 +37,8 @@ LECT_LT_TXT=$(wildcard ../lect/lt/lect_*_lt.txt) $(wildcard ../lect/LH/lt/lect_*
 LECT_FR_TXT=$(wildcard ../lect/fr/lect_*_fr.txt) $(wildcard ../lect/LH/fr/lect_*_fr.txt)
 LECT_TEX=$(LECT_LT_TXT:.txt=.tex)
 
-ORA_TXT=oratio.txt
-ORA_FR_TXT=fr/oratio_fr.txt
+ORA_TXT=../commun/oratio.txt
+ORA_FR_TXT=../commun/fr/oratio_fr.txt
 ORA_TEX=$(ORA_TXT:.txt=.tex)
 
 # Leçons latin/français
@@ -51,7 +52,7 @@ all: $(PDF)
 
 # Attention ! Il faut compiler deux fois pour la gestion des
 #             références croisées
-$(DOCUMENT).pdf : $(DOCUMENT).tex commun.tex $(TEX_GEN_FILES) $(RESP_FR_TEX)\
+$(DOCUMENT).pdf : $(DOCUMENT).tex ../commun/commun.tex $(TEX_GEN_FILES) $(RESP_FR_TEX)\
 	$(ANT_FR_TEX) $(VERS_FR_TEX) $(TIT_PS_FR_TEX) $(PS_TEX)\
 	$(LECT_TEX)\
 	$(RESP_TEX_BIN) $(PS_TEX_BIN) $(LECT_TEX_BIN) $(TIT_PS_TEX_BIN)\
@@ -59,13 +60,13 @@ $(DOCUMENT).pdf : $(DOCUMENT).tex commun.tex $(TEX_GEN_FILES) $(RESP_FR_TEX)\
 	lualatex $<
 	lualatex $<
 
-fr/resp%.tex: fr/resp%.txt
+../commun/fr/resp%.tex: ../commun/fr/resp%.txt
 	$(RESP_TEX_BIN) $<
 	
-fr/ant%.tex: fr/ant%.txt
+../commun/fr/ant%.tex: ../commun/fr/ant%.txt
 	$(RESP_TEX_BIN) $<
 
-fr/vers%.tex: fr/vers%.txt
+../commun/fr/vers%.tex: ../commun/fr/vers%.txt
 	$(RESP_TEX_BIN) $<
 	
 ../ps/fr/tit_%_fr.tex: ../ps/fr/tit_%_fr.txt
@@ -143,7 +144,7 @@ fr/vers%.tex: fr/vers%.txt
 ../lect/LH/lt/lect_IX_lt.tex: ../lect/LH/lt/lect_IX_lt.txt ../lect/LH/fr/lect_IX_fr.txt
 	$(LECT_TEX_BIN) $^
 
-oratio.tex: oratio.txt fr/oratio_fr.txt
+../commun/oratio.tex: ../commun/oratio.txt ../commun/fr/oratio_fr.txt
 	$(ORA_TEX_BIN) $^
 
 %.tex: %.gabc
