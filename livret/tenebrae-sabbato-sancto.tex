@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,twoside]{article} % use larger type; default would be 10pt
+\documentclass[11pt]{article} % use larger type; default would be 10pt
 
 % usual packages loading:
 %\usepackage{luatextra}
@@ -61,7 +61,7 @@
 \input ../commun/commun.tex
 
 \begin{document}
-%\setmainfont[Mapping=tex−text]{Linux Libertine O}%
+\fontsize{12.5}{13.5}\selectfont
 
 % Debug : affichage des paramètres du layout
 %\layout*
@@ -81,11 +81,11 @@
 \setspacebeforeinitial{5mm plus 0em minus 0em}
 
 \def\greinitialformat#1{%
-{\fontsize{55}{50}\selectfont #1}%
+{\fontsize{33}{33}\selectfont #1}%
 }
 
 \def\grebiginitialformat#1{%
-{\fontsize{73}{73}\selectfont #1}%
+{\fontsize{33}{33}\selectfont #1}%
 }
 
 %\setgrefactor{22}
