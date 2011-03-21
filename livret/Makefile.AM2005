@@ -1,3 +1,5 @@
+#!/usr/bin/make
+
 # Chemin vers les scripts de transformation
 RESP_TEX_BIN=../scripts/resp-tex.pl
 PS_TEX_BIN=../scripts/ps-tex.pl
@@ -45,7 +47,7 @@ ORA_TEX=$(ORA_TXT:.txt=.tex)
 
 # Traduction de versets
 
-DOCUMENT=tenebrae-sabbato-sancto
+DOCUMENT=tenebrae-sabbato-sancto-AM2005
 PDF=$(DOCUMENT).pdf
 
 all: $(PDF)

@@ -4,10 +4,10 @@
 %
 
 \newdimen\colpslatin
-\setlength{\colpslatin}{\textwidth * \real{0.48}}
+\setlength{\colpslatin}{\textwidth * \real{0.53}}
 
 \newdimen\colpsvern
-\setlength{\colpsvern}{\textwidth * \real{0.48}}
+\setlength{\colpsvern}{\textwidth * \real{0.43}}
 
 \newdimen\collectlatin
 \setlength{\collectlatin}{\textwidth * \real{0.48}}
@@ -72,7 +72,7 @@
 
 \def\titrerepons#1{%
 \begin{center}%
-\large{\uppercase{#1}}%
+\Large{#1}%
 \end{center}%
 }
 
@@ -127,4 +127,14 @@ reportera aux annexes, page}~\pageref{#1}.%
 
 \def\espaceapresintonation{%
 \vspace{0.2cm}%
+}
+
+\def\ssmCommentary#1#2{%
+\hfill\raisebox{#1}[0mm][0mm]{\color{red}{\small \emph{#2}}}\par
+}
+
+\def\ssmAnnotation#1#2{%
+\setspaceafterinitial {#1 plus 0em minus 0em}%
+\setspacebeforeinitial{#1 plus 0em minus 0em}%
+\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{\color{red}#2}}}{\scriptsize \textsc{\textbf{\color{red}#2}}}%
 }
