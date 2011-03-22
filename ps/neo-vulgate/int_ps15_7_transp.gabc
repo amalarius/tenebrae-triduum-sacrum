@@ -1,0 +1,19 @@
+name:Psalmus 15;
+gabc-copyright: (C) Remi Lucet, 2011, public domain;
+office-part: 3 Ant. (I nocturno);
+occasion: Tenebrae sabbato;
+commentary: ;
+transcriber: Remi Lucet;
+transcription-date: 20110224;
+gregoriotex-font: greciliae;
+mode: ;
+initial-style: 0;
+
+%%
+(c3)
+~1.~C{o}n(fe)sér(fg)<b>va</b>(i hr) me,(h) <b>De</b>(g hr)us(h.) *(:)
+quó(g)ni(g)am(g) spe(g)<b>rá</b>(h)vi(gr) <b>in</b>(f fr) te.(ef..)
+
+<i>Fl</i>{<i>e</i>}<i>xa~:</i>(::) cor(g) me(g)um,~<sp>+</sp>(f.  g g g) (::)
+
+% vim: se enc=utf8 fenc=utf8 digraph syn=gabc:
