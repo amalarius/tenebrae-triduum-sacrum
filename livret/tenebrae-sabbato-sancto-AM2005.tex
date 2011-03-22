@@ -27,6 +27,7 @@
 \usepackage{fancyhdr}
 \usepackage{txfonts}
 \usepackage{textcomp}
+\usepackage{yfonts}
 
 \usepackage{fontspec}
 \defaultfontfeatures{Mapping=tex-text}
@@ -83,19 +84,49 @@
 }
 
 % Première page
+\selectlanguage{francais}
 \begin{titlepage}
+
+
 
 \begingroup
 \begin{center}
-\includegraphics[width=10cm]{../commun/tombeau.png}
+{\color{rougeliturgique}\Large \initfamily O}{\fontfamily{requi2}\fontsize{32}{12}\selectfont FFICE DES T\'EN\`EBRES}
+
+\vspace{0.5cm}
+
+{\fontfamily{requi2}\fontsize{22}{12}\selectfont DU SAMEDI SAINT}
+
+
+\vspace*{2cm}
+
+\includegraphics[width=8cm]{../commun/tombeau.png}
+
+\renewcommand{\textheight}{10cm}
+
+\vspace*{1cm}
+
+\begin{Huge}
+LATIN - FRANÇAIS
+\end{Huge}
+
+\vspace*{1cm}
+
+\begin{huge}
+Schola Saint-Maur
+\end{huge}
+
 \end{center}
 \endgroup
+
+\newpage
+\newpage
 
 \end{titlepage}
 
 % Premier nocturne
 
-\newpage
+
 
 \fancyhead[CO]{\bfseries \uppercase{Samedi Saint - Premier nocturne}}
 
