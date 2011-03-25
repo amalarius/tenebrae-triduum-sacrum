@@ -1,31 +1,31 @@
 Lam 3,22-30
-De lamentatióne Ierémiæ prophétæ. 
+De lamentatióne Ierémiæ\\prophétæ. 
 
-HETH.
-Misericórdiæ Dómini quia non sumus consúmpti : quia non defecérunt miseratiónes eius. 
+{\sc heth}.
+Misericórdiæ Dómini quia non sumus consúmpti\,: quia non defecérunt miseratiónes eius. 
 
-HETH. 
+{\sc heth}.
 Novi dilúculo, multa est fides tua. 
 
-HETH. 
-Pars mea Dóminus, dixit ánima mea : proptérea exspectábo eum. 
+{\sc heth}.
+Pars mea Dóminus, dixit ánima mea\,: proptérea exspectábo eum. 
 
-TETH. 
+{\sc teth}.
 Bonus est Dóminus sperántibus in eum, ánimæ quærénti illum. 
 
-TETH. 
+{\sc teth}.
 Bonum est præstolári cum siléntio salutáre Dei. 
 
-TETH. 
+{\sc teth}.
 Bonum est viro, cum portáverit iugum ab adolescéntia sua. 
 
-IOD. 
-Sedébit solitárius, et tacébit : quia levávit super se. 
+{\sc iod}.
+Sedébit solitárius, et tacébit\,: quia levávit super se. 
 
-IOD. 
+{\sc iod}.
 Ponet in púlvere os suum, si forte sit spes. 
 
-IOD. 
+{\sc iod}.
 Dabit percutiénti se maxíllam, saturábitur oppróbriis. 
 
 Ierúsalem, Ierúsalem, convértere ad Dóminum Deum tuum. 
