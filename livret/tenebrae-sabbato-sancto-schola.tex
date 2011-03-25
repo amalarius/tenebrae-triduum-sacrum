@@ -1,0 +1,622 @@
+\documentclass[11pt,twoside]{article} % use larger type; default would be 10pt
+\raggedbottom
+
+% usual packages loading:
+%\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{fullpage} % to reduce the margins
+\usepackage[toc,page]{appendix}
+
+\pdfminorversion=4
+
+% choose the language of the document here
+\usepackage[latin,frenchb]{babel}
+
+% use the two following package for using normal TeX fonts
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{luainputenc}
+
+% If you use usual TeX fonts, here is a starting point:
+\usepackage{times}
+
+\usepackage{layout}
+
+\usepackage{parallel}
+\usepackage{color}
+\usepackage{pdfcolmk}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{txfonts}
+\usepackage{textcomp}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+\usepackage{libertine}
+
+\usepackage{fullpage} % to reduce the margins
+\setlength{\hoffset}{-1in}
+\setlength{\voffset}{-1in}
+\setlength{\paperwidth}{155mm}
+\setlength{\textwidth}{130mm}
+\setlength{\oddsidemargin}{\paperwidth * \real{0.5} - \textwidth * \real{0.5}}
+\setlength{\evensidemargin}{\paperwidth * \real{0.5} - \textwidth * \real{0.5}}
+\setlength{\paperheight}{219.17mm}
+\setlength{\topmargin}{10.0mm}
+\setlength{\textheight}{179.17mm}
+\setlength{\footskip}{10.0mm}
+\setlength{\marginparwidth}{0mm}
+\setlength{\marginparsep}{0mm}
+\mag=1355 % Pour revenir en 210mm x 297mm
+
+\pagestyle{fancy}
+\headheight=20pt
+\headsep=15pt
+
+\usepackage{float}
+ 
+\floatstyle{plain}
+\newfloat{piece}{H}
+
+\input ../commun/commun.tex
+
+\begin{document}
+\fontsize{12.5}{13.5}\selectfont
+\parindent=0pt
+
+\tolerance=200
+\pretolerance=10
+\hbadness=10000
+\widowpenalty=1000
+\clubpenalty=1000
+
+% Debug : affichage des paramètres du layout
+%\layout*
+
+% Paramètrage des entêtes
+\fancyhead{} % clear all header fields
+\fancyhead[CE]{\bfseries \sc{office des ténèbres}}
+\fancyhead[CO]{\bfseries \sc{samedi saint}}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[CO,CE]{\small{\textit{Schola Saint-Maur}}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Paramètrage de Gregorio
+\setspaceafterinitial{9mm plus 0em minus 0em}
+\setspacebeforeinitial{5mm plus 0em minus 0em}
+
+\def\greinitialformat#1{%
+{\fontsize{33}{33}\selectfont #1}%
+}
+
+\def\grebiginitialformat#1{%
+{\fontsize{33}{33}\selectfont #1}%
+}
+
+% Quelques macros pour les partitions grégorien
+\def\ssmAnnotation#1#2#3{%
+\setspaceafterinitial {#1 plus 0em minus 0em}%
+\setspacebeforeinitial{#1 plus 0em minus 0em}%
+\gresetfirstannotation{\bf #2}%
+\gresetsecondannotation{\bf #3}%
+}
+
+\def\ssmCommentary#1#2{%
+\hfill\raisebox{#1}[0mm][0mm]{\color{red}{\small \emph{#2}}}\par
+}
+
+% Première page
+%\begin{titlepage}
+
+%\end{titlepage}
+
+% ------------------- Premier nocturne
+\newpage
+\fancyhead[CO]{\bfseries \sc{samedi saint -- premier nocturne}}
+\titrenocturne{Premier nocturne.}
+
+\rubrique{On ne chante ni invitatoire, ni hymne, mais on commence 
+directement par la première antienne, en se signant les lèvres.}
+
+\rubrique{À la fin de chaque psaume, un des servants éteint l’un des 
+quinze cierges du chandelier qui aura été placé en avant de l’autel.}
+
+% Antienne 1
+\vskip 12pt
+\ssmAnnotation{6mm}{1. Ant.}{8. g}
+\ssmCommentary{-1mm}{Cf. Ps. 4, 9}
+\includescore{../800/ant_In_pace.tex}
+%\input{../commun/fr/ant_In_pace_fr}
+
+% Psaume 4
+\vskip 12pt
+\input{../ps/fr/tit_ps4_fr}
+\input{../ps/neo-vulgate/int_ps4_8}
+\input{../ps/neo-vulgate/ps4_8}
+
+% Antienne 2
+\vskip 12pt
+\ssmAnnotation{3mm}{2. Ant.}{4. e}
+\ssmCommentary{0mm}{Cf. Ps. 14, 1}
+\includescore{../800/ant_Habitabit.tex}
+%\input{../commun/fr/ant_Habitabit_fr}
+
+% Psaume 14
+\vskip 6pt
+\input{../ps/fr/tit_ps14_fr}
+\input{../ps/neo-vulgate/int_ps14_4}
+\kern -12pt
+\input{../ps/neo-vulgate/ps14_4}
+
+% Antienne 3
+\vskip 6pt
+\ssmAnnotation{4mm}{3. Ant.}{7. c}
+\ssmCommentary{0mm}{Cf. Ps. 15, 9}
+\includescore{../800/ant_Caro_mea.tex}
+\kern -12pt
+%\input{../commun/fr/ant_Caro_mea_fr}
+
+% Psaume 15
+\input{../ps/fr/tit_ps15_fr}
+\input{../ps/neo-vulgate/int_ps15_7}
+\input{../ps/neo-vulgate/ps15_7}
+
+\rubriquefinpsaumes
+
+\ssmCommentary{0mm}{Cf. Ps. 21, 19}
+\includescore{../commun/vers_In_pace_in_idipsum.tex}
+%\input{../commun/fr/vers_In_pace_in_idipsum_fr}
+
+\rubriquefinverset
+
+% Leçon I
+\vskip 12pt
+\titrelecture{Lecture I.}{Lam 3, 22-30}
+\reflect{Lect_I}
+\input{../lect/lt/lect_I_lt}
+
+% Répons I
+\vskip 12pt
+\vskip 12pt
+\vskip 12pt
+\ssmAnnotation{5mm}{Rép. 1.}{4.}
+\ssmCommentary{-1mm}{Cf. Is 53, 7\,.\,41}
+\includescore{../800/resp_Sicut_ovis.tex}
+\input{../commun/fr/resp_Sicut_ovis_fr}
+
+% Leçon II
+\vskip 12pt
+\titrelecture{Lecture II.}{Lam 4, 1-6}
+\reflect{Lect_II}
+\input{../lect/lt/lect_II_lt}
+
+% Répons II
+\vskip 12pt
+\ssmAnnotation{6mm}{Rép. 2.}{5.}
+\includescore{../800/resp_Ierusalem.tex}
+\input{../commun/fr/resp_Ierusalem_fr}
+
+% Leçon III
+\vskip 12pt
+\titrelecture{Lecture III.}{Lam 5, 1-11}
+\reflect{Lect_III}
+\input{../lect/lt/lect_III_lt}
+
+% Répons III
+\vskip 12pt
+\vskip 12pt
+\vskip 12pt
+\ssmAnnotation{5mm}{Rép. 3.}{5.}
+\ssmCommentary{0mm}{Cf. Mt. 26, 38\,.\,45}
+\includescore{../800/resp_Plange.tex}
+\input{../commun/fr/resp_Plange_fr}
+
+\rubrique{On garde le silence un instant. Au signal du 
+cérémoniaire, tous se lèvent, et on entonne la première 
+antienne du deuxième nocturne.}
+
+\finnocturne
+
+% ------------------- Deuxième nocturne
+\newpage
+\fancyhead[CO]{\bfseries \sc{samedi saint -- deuxième nocturne}}
+\titrenocturne{Deuxième nocturne.}
+
+% Antienne 1
+\ssmAnnotation{4mm}{1. Ant.}{5. a}
+\ssmCommentary{0mm}{Cf. Ps. 23, 9}
+\includescore{../800/ant_Elevamini.tex}
+%\input{../commun/fr/ant_Elevamini_fr}
+
+% Psaume 23
+\input{../ps/fr/tit_ps23_fr}
+\input{../ps/neo-vulgate/int_ps23_5}
+\kern -12pt
+\input{../ps/neo-vulgate/ps23_5}
+
+% Antienne 2
+%\vskip 12pt
+\vskip 6pt
+\ssmAnnotation{3mm}{2. Ant.}{4. e}
+\ssmCommentary{0mm}{Cf. Ps. 26, 13}
+\includescore{../800/ant_Credo_videre.tex}
+\kern -12pt
+%\input{../commun/fr/ant_Credo_videre_fr}
+
+% Psaume 26
+\vskip 12pt
+\input{../ps/fr/tit_ps26_fr}
+\input{../ps/neo-vulgate/int_ps26_4}
+\input{../ps/neo-vulgate/ps26_4}
+
+% Antienne 3
+\vskip 12pt
+\ssmAnnotation{3mm}{3. Ant.}{8. g}
+\ssmCommentary{0mm}{Cf. Ps. 29, 4}
+\includescore{../800/ant_Domine.tex}
+\kern -12pt
+%\input{../commun/fr/ant_Domine_abstraxisti_fr}
+
+% Psaume 29
+\input{../ps/fr/tit_ps29_fr}
+\input{../ps/neo-vulgate/int_ps29_8}
+\input{../ps/neo-vulgate/ps29_8}
+
+\rubriquefinpsaumes
+
+% Verset
+\ssmCommentary{0mm}{Cf. Ps. 40, 11}
+\includescore{../commun/vers_Tu_autem.tex}
+\input{../commun/fr/vers_Tu_autem_fr}
+
+\rubriquefinverset
+
+% Leçon IV
+\vskip 12pt
+\vskip 12pt
+\titrelecture{Lecture IV.}{PG 43, 439\,.\,451\,.\,462-463}
+\reflect{Lect_IV}
+\input{../lect/LH/lt/lect_IV_lt}
+
+% Répons IV
+\vskip 12pt
+\ssmAnnotation{5mm}{Rép. 4.}{7.}
+\includescore{../800/resp_Recessit.tex}
+\input{../commun/fr/resp_Recessit_fr}
+
+% Leçon V
+\vskip 12pt
+\vskip 12pt
+\vskip 12pt
+\titrelecture{Lecture V.}{PG 43, 439\,.\,451\,.\,462-463}
+\reflect{Lect_V}
+\input{../lect/LH/lt/lect_V_lt}
+
+% Répons V
+\vskip 12pt
+\ssmAnnotation{4mm}{Rép. 5.}{8.}
+\ssmCommentary{+1mm}{Cf. Mt. 26, 55}
+\includescore{../800/resp_O_vos_omnes.tex}
+\input{../commun/fr/resp_O_vos_omnes_fr}
+
+% Leçon VI
+\vskip 12pt
+\titrelecture{Lecture VI.}{PG 43, 439\,.\,451\,.\,462-463}
+\reflect{Lect_VI}
+\input{../lect/LH/lt/lect_VI_lt}
+
+% Répons VI
+\vskip 12pt
+\ssmAnnotation{5mm}{Rép. 6.}{4.}
+\ssmCommentary{-1mm}{Cf. Is. 57, 1; 53, 7-8}
+\includescore{../800/resp_Ecce.tex}
+\input{../commun/fr/resp_Ecce_fr}
+
+\rubrique{On garde le silence un instant. Au signal du cérémoniaire, 
+tous se lèvent, et on entonne la première antienne du troisième nocturne.}
+
+\finnocturne
+
+% ------------------- Troisième nocturne
+\newpage
+\fancyhead[CO]{\bfseries \sc{samedi saint -- troisième nocturne}}
+\titrenocturne{Troisième nocturne.}
+
+% Antienne 1
+\ssmAnnotation{5mm}{1. Ant.}{8. g}
+\ssmCommentary{-1mm}{Cf. Ps. 53, 6}
+\includescore{../800/ant_Deus_adiuvat_me.tex}
+%\input{../commun/fr/ant_Deus_adiuvat_me_fr}
+
+% Psaume 53
+\input{../ps/fr/tit_ps53_fr}
+\input{../ps/neo-vulgate/int_ps53_8}
+\input{../ps/neo-vulgate/ps53_8}
+
+% Antienne 2
+\vskip 12pt
+\ssmAnnotation{6mm}{2. Ant.}{7. a}
+\ssmCommentary{1mm}{Cf. Ps. 75, 3}
+\includescore{../800/ant_In_pace_factus_est.tex}
+%\input{../commun/fr/ant_In_pace_factus_est_fr}
+
+% Psaume 75
+\input{../ps/fr/tit_ps75_fr}
+\input{../ps/neo-vulgate/int_ps75_7}
+\input{../ps/neo-vulgate/ps75_7}
+
+% Antienne 3
+\vskip 12pt
+\ssmAnnotation{5mm}{3. Ant.}{4. d}
+\ssmCommentary{0mm}{Cf. Ps. 87, 5-6}
+\includescore{../800/ant_Factus_sum.tex}
+%\input{../commun/fr/ant_Factus_sum_fr}
+
+% Psaume 87
+\vbox{
+\input{../ps/fr/tit_ps87_fr}
+\input{../ps/neo-vulgate/int_ps87_4}
+}
+\input{../ps/neo-vulgate/ps87_4}
+
+\rubriquefinpsaumes
+
+% Verset
+\ssmCommentary{0mm}{Cf. Ps. 75, 3}
+\includescore{../commun/vers_In_pace_factus_est.tex}
+\input{../commun/fr/vers_In_pace_factus_est_fr}
+
+\rubriquefinverset
+
+% Leçon VII
+\titrelecture{Lecture VII.}{He 4, 1-5}
+\reflect{Lect_VII}
+\input{../lect/LH/lt/lect_VII_lt}
+
+% Répons VII
+\vskip 12pt
+\vskip 12pt
+\ssmAnnotation{3mm}{Rép. 7.}{8.}
+\ssmCommentary{0mm}{Cf. Ps. 2, 2\,.\,1}
+\includescore{../800/resp_Astiterunt.tex}
+\input{../commun/fr/resp_Astiterunt_fr}
+
+% Leçon VIII
+\vskip 12pt
+\titrelecture{Lecture VIII.}{He 4, 6-10}
+\reflect{Lect_VIII}
+\input{../lect/LH/lt/lect_VIII_lt}
+
+% Répons VIII
+\vskip 12pt
+\ssmAnnotation{4mm}{Rép. 8.}{4.}
+\ssmCommentary{-1mm}{Cf. Ps. 87, 5\,.\,6\,.\,7}
+\includescore{../800/resp_Aestimatus_sum.tex}
+\input{../commun/fr/resp_Aestimatus_sum_fr}
+
+% Leçon IX
+\vskip 12pt
+\ssmAnnotation{4mm}{Rép. 8.}{4.}
+\titrelecture{Lecture IX.}{He 4, 11-13}
+\reflect{Lect_IX}
+\input{../lect/LH/lt/lect_IX_lt}
+
+% Répons IX
+\vskip 6pt
+\ssmAnnotation{5mm}{Rép. 9.}{2.}
+\ssmCommentary{0mm}{Cf. Mt. 27, 62\,.\,67}
+\includescore{../800/resp_Sepulto.tex}
+\input{../commun/fr/resp_Sepulto_fr}
+
+\rubrique{On garde le silence un instant. Au signal du cérémoniaire, 
+tous se lèvent et se tournent vers l’autel.  L’officiant  entonne la 
+première antienne des Laudes, et tous se signent.}
+
+\finnocturne
+
+% ------------------- Laudes
+\newpage
+\fancyhead[CO]{\bfseries \sc{samedi saint -- laudes}}
+\titrelaudes{Laudes}
+
+% Antienne 1
+\ssmAnnotation{5mm}{1. Ant.}{2* d}
+\ssmCommentary{0mm}{Cf. Rom 8, 32}
+\includescore{../AM2005/ant_O_mors.tex}
+%\input{../commun/fr/ant_O_mors_fr}
+
+% Psaume 50
+\input{../ps/fr/tit_ps50_fr}
+\input{../ps/neo-vulgate/int_ps50_2_etoile}
+\input{../ps/neo-vulgate/ps50_2_etoile}
+
+% Antienne 2
+\vskip 12pt
+\vbox{
+\ssmAnnotation{5mm}{2. Ant.}{2* a}
+\ssmCommentary{1mm}{Cf. Za 12, 10}
+\includescore{../AM2005/ant_Plangent_eum.tex}
+%\input{../commun/fr/ant_Plangent_eum_fr}
+}
+
+% Psaume 91
+\input{../ps/fr/tit_ps91_fr}
+\input{../ps/neo-vulgate/int_ps91_2_etoile}
+\input{../ps/neo-vulgate/ps91_2_etoile}
+
+% Antienne 3
+\vskip 12pt
+\vskip 12pt
+\vskip 12pt
+\vskip 12pt
+\vskip 12pt
+\vbox{
+\ssmAnnotation{4mm}{3. Ant.}{7. b}
+\ssmCommentary{0mm}{Cf. Lm 1, 19}
+\includescore{../AM2005/ant_Attendite.tex}
+%\input{../commun/fr/ant_Attendite_fr}
+}
+
+% Psaume 63
+\vbox{
+\kern -12pt
+\input{../ps/fr/tit_ps63_fr}
+\input{../ps/neo-vulgate/int_ps63_7}
+}
+\input{../ps/neo-vulgate/ps63_7}
+
+% Antienne 4
+\vskip 12pt
+\ssmAnnotation{5mm}{4. Ant.}{2. d}
+%\ssmCommentary{-1mm}{Cf. Lm 1, 19}
+\includescore{../AM2005/ant_A_porta_inferi.tex}
+\kern -12pt
+%\input{../commun/fr/ant_A_porta_inferi_fr}
+
+% Psaume AT23
+\input{../ps/fr/tit_at23_fr}
+\input{../ps/neo-vulgate/int_at23_2}
+\kern -12pt
+\input{../ps/neo-vulgate/at23_2}
+
+% Antienne 5
+\vskip 12pt
+\ssmAnnotation{4mm}{5. Ant.}{8. c}
+\ssmCommentary{+1mm}{Cf. Lm 1, 12}
+\includescore{../AM2005/ant_O_vos_omnes.tex}
+\kern -12pt
+%\input{../commun/fr/ant_O_vos_omnes_fr}
+
+% Psaume 150
+\vbox{
+\kern -12pt
+\input{../ps/fr/tit_ps150_fr}
+\input{../ps/neo-vulgate/int_ps150_8}
+}
+\kern -12pt
+\input{../ps/neo-vulgate/ps150_8}
+
+\rubrique{On ne dit pas de Lecture Brève, mais au signal du
+cérémoniaire, tous se lèvent et, tournés vers l’autel, répondent 
+au verset proclamé par un chantre. L’officiant entonne alors 
+l’antienne du \rubriqueBlack{Benedíctus}.}
+
+% Verset
+\vskip 12pt
+\ssmCommentary{-1mm}{Cf. Ps. 15, 9\,.\,10}
+\includescore{../commun/vers_Caro_mea.tex}
+%\input{../commun/fr/vers_Caro_mea_fr}
+
+% Antienne du Benedictus
+\vskip 12pt
+\ssmAnnotation{6mm}{A Bened.}{1. g}
+\includescore{../AM2005/ant_Mulieres.tex}
+%\input{../commun/fr/ant_Mulieres_fr}
+
+% Benedictus
+\begin{center}
+{\bf {\sc {Benedictus}}}
+\end{center}
+\kern -12pt
+\ssmCommentary{-1mm}{Cf. Lc 1, 68-79}
+\input{../ps/neo-vulgate/int_benedictus_1}
+\input{../ps/neo-vulgate/benedictus_1}
+
+\rubrique{%
+Les cierges du chandelier triangulaire ont été successivement 
+éteints. Un seul, placé au sommet du chandelier, est resté 
+allumé.  Pendant le \rubriqueBlack{Benedíctus}, on éteint les 
+six cierges qui brûlent sur l’autel, de chaque côté alternativement, 
+de manière que tous soient éteints au dernier verset.  On éteint 
+aussi toutes les lumières de l’église.}
+
+\rubrique{%
+Après la reprise de l’antienne \rubriqueBlack{Mulíeres},
+tous se mettent à genoux et chantent le \rubriqueBlack{Christus}, pendant 
+lequel un des servants retire le cierge resté allumé, et va le dissimuler 
+derrière l’autel.}
+
+\ssmCommentary{1mm}{Cf. Phil 2, 8-9}
+\ssmAnnotation{2mm}{Ant.}{5.}
+\includescore{../800/ant_Christus.tex}
+\input{../commun/fr/ant_Christus_fr}
+
+\rubrique{%
+On garde le silence le temps d’un \rubriqueBlack{Notre Père}.
+L’officiant lit alors l’oraison sans dire \rubriqueBlack{Orémus},
+sur un ton assez grave, en descendant d’un ton sur la dernière syllabe 
+et sans conclusion.}
+
+% Oraison
+\begin{center}
+\textbf{Oraison.}
+\end{center}
+\input{../commun/oratio}
+
+\rubrique{L’oraison terminée, on frappe avec bruit sur les stalles, 
+jusqu’à ce que le cierge resté allumé soit déposé au sommet du chandelier. 
+Au signal du cérémoniaire, tous se lèvent alors et se retirent en silence.}
+
+\finoffice
+
+% ------------------- Annexes
+\newpage
+\fancyhead[CO]{\bfseries \sc{samedi saint -- annexes}}
+\begin{appendices}
+
+\label{Lect_I}
+\titrelecture{Lecture I.}{}
+\includescore{../lect/lect_I.tex}
+
+\newpage
+\label{Lect_II}
+\titrelecture{Lecture II.}{}
+\includescore{../lect/lect_II.tex}
+
+\vskip 36pt
+\label{Lect_III}
+\titrelecture{Lecture III.}{}
+\includescore{../lect/lect_III.tex}
+
+\vskip 36pt
+\label{Lect_IV}
+\titrelecture{Lecture IV.}{}
+\includescore{../lect/LH/lect_IV.tex}
+
+\vskip 36pt
+\label{Lect_V}
+\titrelecture{Lecture V.}{}
+\includescore{../lect/LH/lect_V.tex}
+
+\vskip 36pt
+\label{Lect_VI}
+\titrelecture{Lecture VI.}{}
+\includescore{../lect/LH/lect_VI.tex}
+
+\newpage
+\label{Lect_VII}
+\titrelecture{Lecture VII.}{}
+\includescore{../lect/LH/lect_VII.tex}
+
+\vskip 36pt
+\label{Lect_VIII}
+\titrelecture{Lecture VIII.}{}
+\includescore{../lect/LH/lect_VIII.tex}
+
+\newpage
+\label{Lect_IX}
+\titrelecture{Lecture IX.}{}
+\includescore{../lect/LH/lect_IX.tex}
+
+\end{appendices}
+
+% Index
+
+%\newpage
+
+%\tableofcontents
+
+\end{document}
