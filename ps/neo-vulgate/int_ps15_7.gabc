@@ -11,9 +11,9 @@ initial-style: 0;
 
 %%
 (c3)
-~1.~C{o}n(hg)sér(hi)<b>va</b>(k jr) me,(j) <b>De</b>(i jr)us(j.) *(:)
-quó(i)ni(i)am(i) spe(i)<b>rá</b>(j)vi(ir) <b>in</b>(h hr) te.(gh..)
+~~~~C{o}n(hg)sér(hi)<b>va</b>(k jr) me,(j) <b>De</b>(i jr)us(j.) *(:)
+quó(i)ni(i)am(i) spe(i)<b>rá</b>(j)vi(ir) <b>in</b>(h hr) te.(gh..) (::Z)
 
-<i>Fl</i>{<i>e</i>}<i>xa~:</i>(::) cor(i) me(i)um,~<sp>+</sp>(h.  i i i) (::)
+<i>Flexa~:</i>~c{o}r(i) me(i)um,~<sp>+</sp>(h.  i i i) (::)
 
 % vim: se enc=utf8 fenc=utf8 digraph syn=gabc:
