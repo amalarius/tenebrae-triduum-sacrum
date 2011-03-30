@@ -35,19 +35,36 @@ open ($fh_tex, '>', $rep_tex) or die "Echec de l'ouverture du fichier : $rep_tex
 
 # Nom du psaume
 
+print $fh_tex "{\n".
+              "\\parindent=0pt\\parskip=00pt\n".
+              "\\begin{center}\n";
+
 my $ligne = <$fh>;
 chomp $ligne;
-print $fh_tex "\\begin{center}\\uppercase{\\Large{$ligne}}\\end{center}\n"; 
+#print $fh_tex "\\begin{center}\\uppercase{\\Large{$ligne}}\\end{center}\n"; 
+print $fh_tex "{\\bf \\textsc{$ligne}}\\par\n";
+print $fh_tex "\\nobreak\n";
 
 # Résumé
 $ligne = <$fh>;
 chomp $ligne;
-print $fh_tex "\\begin{center}\\uppercase{\\large{$ligne}}\\end{center}\n";
+#print $fh_tex "\\begin{center}\\uppercase{\\large{$ligne}}\\end{center}\n";
+print $fh_tex "\\parskip=0pt\n";
+print $fh_tex "\\textsc{$ligne}\\par\n";
+print $fh_tex "\\nobreak\n";
+
+print $fh_tex "\\fontsize{10.5}{12.5}\\selectfont\n";
 
 # Citation
 $ligne = <$fh>;
 chomp $ligne;
-print $fh_tex "\\begin{center}\\textit{$ligne}\\end{center}\n";
+#print $fh_tex "\\begin{center}\\textit{$ligne}\\end{center}\n";
+print $fh_tex "\\parfillskip=0pt\n";
+print $fh_tex "\\textit{$ligne}\n";
+print $fh_tex "\\nobreak\n";
+
+print $fh_tex "\\end{center}\n".
+              "}\\kern -3pt";
 
 close($fh);
 close($fh_tex);

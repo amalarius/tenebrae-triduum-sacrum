@@ -14,21 +14,25 @@ sub fin_parallele() {
 }
 
 sub debut_colonne_gauche {
-	return '\latin{';
+	#return '\latin{';
+	return "{\\fontsize{11.0}{12.5}\\selectfont\\latin{";
 }
 
 sub colonne_gauche($) {
 	my ($texte) = @_;
-	return "\\latin{$texte}";
+	#return "\\latin{$texte}";
+	return "{\\fontsize{11.0}{12.5}\\latin{$texte}}";
 }
 
 sub debut_colonne_droite {
-	return '\vern{';
+	#return '\vern{';
+	return "{\\fontsize{11.0}{12.5}\\selectfont\\vern{";
 }
 
 sub colonne_droite($) {
 	my ($texte) = @_;
-	return "\\vern{$texte}";
+	#return "\\vern{$texte}";
+	return "{\\fontsize{11.0}{12.5}\\selectfont\\vern{$texte}}";
 }
 
 sub fin_block() {
@@ -37,7 +41,8 @@ sub fin_block() {
 
 sub commentaire($) {
 	my ($texte) = @_;
-	return "\\commentary{\\color{red}{\\emph{$texte}}}\n";
+	#return "\\commentary{\\color{red}{\\emph{$texte}}}\n";
+	return "\\ssmCommentary{0mm}{$texte}\n";
 }
 
 sub texte_centre($) {
@@ -132,7 +137,7 @@ my $ligne;
 $ligne = <$fh>;
 $ligne = <$fh_vern>;
 chomp $ligne;
-print $fh_tex commentaire($ligne);
+#print $fh_tex commentaire($ligne);
 
 ## Maintenant, lecture parallèle des deux fichiers et composition de la sortie
 print $fh_tex debut_parallele();
@@ -142,11 +147,11 @@ if (defined($opt_t)) {
 	# Titre
 	$ligne = <$fh>;
 	chomp $ligne;
-	print $fh_tex colonne_gauche(minipage_gauche(texte_centre(texte_gras(texte_large($ligne))))), "\n";
+	print $fh_tex colonne_gauche(minipage_gauche(texte_centre(texte_gras($ligne)))), "\n";
 	
 	$ligne = <$fh_vern>;
 	chomp $ligne;
-	print $fh_tex colonne_droite(minipage_droite(texte_centre(texte_gras(texte_large($ligne))))), "\n";
+	print $fh_tex colonne_droite(minipage_droite(texte_centre(texte_gras($ligne)))), "\n";
 }
 
 # Sous-titre s'il y en a
@@ -154,7 +159,7 @@ if (defined($opt_t)) {
 	$ligne = <$fh>;
 	chomp $ligne;
 	if ($ligne !~ /^\s*$/) {
-		print $fh_tex espace_deux_colonnes("0.4cm"), "\n";
+		print $fh_tex espace_deux_colonnes("10"), "\n";
 		print $fh_tex colonne_gauche(minipage_gauche(texte_centre(texte_italique($ligne)))), "\n";
 	
 		$ligne = <$fh_vern>;
@@ -175,7 +180,9 @@ else {
 	$ligne = <$fh_vern>;
 }
 
-print $fh_tex espace_deux_colonnes("0.2cm");
+if (defined($opt_t)) {
+	print $fh_tex espace_deux_colonnes("10");
+}
 
 while (defined($ligne = <$fh>)) {
 	
@@ -191,6 +198,7 @@ while (defined($ligne = <$fh>)) {
 	}
 	while (defined($ligne = <$fh>) && ($ligne !~ /^\s*\n{0,1}$/));
 	print $fh_tex fin_block();
+	print $fh_tex fin_block();
 	
 	# Colonne droite
 	print $fh_tex debut_colonne_droite();
@@ -201,9 +209,10 @@ while (defined($ligne = <$fh>)) {
 	}
 	print $fh_tex fin_block();
 	print $fh_tex fin_block();
+	print $fh_tex fin_block();
 	
 	if (defined($ligne)) {
-		print $fh_tex espace_deux_colonnes("0.3cm");
+		print $fh_tex espace_deux_colonnes("4");
 	}
 }
 

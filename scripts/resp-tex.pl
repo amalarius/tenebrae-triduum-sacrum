@@ -43,6 +43,11 @@ open ($fh_tex, '>', $rep_tex) or die "Echec de l'ouverture du fichier : $rep_tex
 
 my $ligne;
 
+
+print $fh_tex "{\n".
+              "\\parskip=3pt\n".
+              "\\fontsize{11.5}{12.5}\\selectfont\n";
+
 print $fh_tex debut_block_italique;
 while (defined($ligne = <$fh>)) {
 	# Remplacement du symbole de verset par un symbole latex
@@ -52,6 +57,8 @@ while (defined($ligne = <$fh>)) {
 	print $fh_tex $ligne;
 }
 print $fh_tex fin_block;
+
+print $fh_tex "}\n";
 
 close($fh);
 close($fh_tex);

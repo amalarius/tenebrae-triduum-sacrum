@@ -3,8 +3,6 @@
 % Inspirées du livret d'exemple de complies bénédictines de Gregorio
 %
 
-\definecolor{rougeliturgique}{rgb}{0.828,0.218,0.07}
-
 \newdimen\colpslatin
 \setlength{\colpslatin}{\textwidth * \real{0.53}}
 
@@ -49,13 +47,13 @@
 \vspace{-0.2cm}%
 }
 
-\newdimen\temp 
 \def\twocolspace#1{%
-\temp=#1%
-\advance\temp by 1mm%
-\latin{\ \vspace{\temp}}\vern{\ \vspace{\temp}}%
-\kern -1mm%
-\relax %
+{%
+\kern -2pt%
+\fontsize{1}{#1}\selectfont%
+\latin{~}\vern{~}%
+\kern -2pt%
+}%
 }
 
 \def\twocolstrictspace#1{%
@@ -74,14 +72,19 @@
 
 \def\titrerepons#1{%
 \begin{center}%
-\Large{#1}%
+\large{\uppercase{#1}}%
 \end{center}%
 }
 
-\def\titrelecture#1{%
-\begin{center}%
-\large{\uppercase{#1}}%
-\end{center}%
+\def\titrelecture#1#2{%
+{
+%\begin{center}%
+\centerline{\bf \textsc{#1}}\par%
+\nobreak%
+\fontsize{10.5}{12.5}\selectfont%
+\centerline{#2}\par%
+%\end{center}%
+}
 }
 
 \def\titrenocturne#1{%
@@ -98,45 +101,50 @@
 
 \def\finnocturne{%
 \begin{center}%
-\gresep{3}{35}%
+\gresep{3}{15}%
 \end{center}
 }
 
 \def\finoffice{%
 \begin{center}%
-\gresep{2}{35}%
+\gresep{2}{15}%
 \end{center}
 }
 
 \def\rubrique#1{%
+{%
+\parskip=6pt\parfillskip=6pt%
+\fontsize{11.5}{12.5}\selectfont%
 \textcolor{red}{\itshape #1}%
+}%
+}
+
+\def\rubriqueBlack#1{%
+{\textcolor{black}{\textnormal{#1}}}%
 }
 
 \def\rubriquefinpsaumes{%
-\textcolor{red}{\itshape Après la reprise de l’antienne,tous se lèvent et,
+\rubrique{
+Après la reprise de l’antienne, tous se lèvent et,
 tournés vers l’autel, répondent au verset proclamé par le chantre.}%
 }
 
 \def\rubriquefinverset{%
-\textcolor{red}{\itshape On garde le silence, le temps d’un} Notre Père. %
-\textcolor{red}{\itshape Au signal du cérémoniaire, tous s’assoient.}%
+\rubrique{%
+On garde le silence, le temps d’un \rubriqueBlack{Notre Père}.
+Au signal du cérémoniaire, tous s’assoient.}%
 }
 
 \def\reflect#1{%
+{
+\nobreak
+\fontsize{11.5}{12.5}\selectfont
 \textcolor{red}{\itshape Pour la notation grégorienne de la lecture, on se %
-reportera aux annexes, page}~\pageref{#1}.%
+reportera aux annexes, page} \pageref{#1}.%
+}
+\nobreak
 }
 
 \def\espaceapresintonation{%
 \vspace{0.2cm}%
-}
-
-\def\ssmCommentary#1#2{%
-\hfill\raisebox{#1}[0mm][0mm]{\color{red}{\small \emph{#2}}}\par
-}
-
-\def\ssmAnnotation#1#2{%
-\setspaceafterinitial {#1 plus 0em minus 0em}%
-\setspacebeforeinitial{#1 plus 0em minus 0em}%
-\gresetfirstlineaboveinitial{\scriptsize \textsc{\textbf{\color{red}#2}}}{\scriptsize \textsc{\textbf{\color{red}#2}}}%
 }

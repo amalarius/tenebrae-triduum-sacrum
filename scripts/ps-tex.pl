@@ -34,12 +34,14 @@ sub fin_parallele() {
 
 sub colonne_gauche($) {
 	my ($texte) = @_;
-	return "\\latin{$texte}\n";
+	#return "\\latin{$texte}";
+	return "{\\leftskip 0.4cm\\parindent -0.4cm\\latin{$texte}}";
 }
 
 sub colonne_droite($) {
 	my ($texte) = @_;
-	return "\\vern{$texte}\n";
+	#return "\\vern{$texte}";
+	return "{\\fontsize{11.5}{13.5}\\selectfont\\vern{$texte}}";
 }
 
 # Programme principal
@@ -81,7 +83,13 @@ if (defined($opt_2)) {
 	
 	$ligne = <$fh_vern>;
 	chomp $ligne;
-	print $fh_tex texte_italique($ligne), "\n";
+	print $fh_tex "{\n".
+                      "\\parskip=3pt\n".
+                      "\\fontsize{11.5}{12.5}\\selectfont\n";
+	print $fh_tex texte_italique($ligne);
+	print $fh_tex "\\par".
+                      "\\kern 6pt".
+                      "\n}\n";
 }
 
 ## Maintenant, lecture parallèle des deux fichiers et composition de la sortie
@@ -104,16 +112,35 @@ while (defined($ligne = <$fh_ps>)) {
 	$ligne =~ s/\s=\|=/\\textcolor\{red\}\{\\grecross\}/g;
 	
 	# Flexe
-	$ligne =~ s/\s\+/~{\\color\{red\} \\gredagger}/g;
+	$ligne =~ s/\s\+/~{\\color{red} \\gredagger}/g;
 	
 	# Mediante, plus passage à la ligne
-	$ligne =~ s/\s\*/~{\\color\{red\} \\greheightstar}\n/g;
+	$ligne =~ s/\s\*/~{\\color{red} \\greheightstar}/g;
 	
 	# Syllabes préparatoires en italique
-	$ligne =~ s|/([^/]*?)/|\\textit{$1}|g;
+	$ligne =~ s|/([^/]*?)/|\\-\\textit{$1\\/}\\-|g;
 	
 	# Accents en gras
-	$ligne =~ s/#([^\#]*?)#/\\textbf{$1}/g;
+	$ligne =~ s/#([^\#]*?)#/\\-\\textbf{$1}\\-/g;
+	
+	# Suppression des ' \-' en trop
+	$ligne =~ s/\\-\\-/\\-/g;
+	$ligne =~ s/ \\-/ /g;
+	$ligne =~ s/\\- / /g;
+	$ligne =~ s/([ ][a-záæ])\\-/$1/g;
+	$ligne =~ s/({[a-záæ]})\\-/$1/g;
+	$ligne =~ s/( [a-záæ]})\\-/$1/g;
+	$ligne =~ s/\\-([a-záæ][ ,:;\.\?\!])/$1/g;
+	$ligne =~ s/}\\-([,:;\.\?\!])/}$1/g;
+
+	# Ajout d'espaces fines insécables près des ponctuations hautes ou doubles
+	$ligne =~ s/\!/\\,!/g;
+	$ligne =~ s/\?/\\,?/g;
+	$ligne =~ s/;/\\,;/g;
+	$ligne =~ s/:/\\,:/g;
+	$ligne =~ s/»/\\,»/g;
+	$ligne =~ s/«/«\\,/g;
+
 	
 	print $fh_tex colonne_gauche($ligne);
 	
@@ -122,6 +149,7 @@ while (defined($ligne = <$fh_ps>)) {
 		chomp $ligne;
 		print $fh_tex colonne_droite(texte_italique($ligne));
 	}
+	print $fh_tex "\n";
 	
 	$nb++;
 }

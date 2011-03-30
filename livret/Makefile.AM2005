@@ -1,5 +1,3 @@
-#!/usr/bin/make
-
 # Chemin vers les scripts de transformation
 RESP_TEX_BIN=../scripts/resp-tex.pl
 PS_TEX_BIN=../scripts/ps-tex.pl
