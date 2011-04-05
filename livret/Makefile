@@ -111,9 +111,15 @@ $(DOCUMENT).pdf : $(DOCUMENT).tex ../commun/commun.tex $(TEX_GEN_FILES) $(RESP_F
 ../ps/neo-vulgate/ps91_2_etoile.tex: ../ps/neo-vulgate/ps91_2_etoile.txt ../ps/fr/ps91_fr.txt
 	$(PS_TEX_BIN) -2 $^
 
-../ps/neo-vulgate/ps150_8.tex: ../ps/neo-vulgate/ps150_8.txt ../ps/fr/ps150_fr.txt
+../ps/neo-vulgate/ps148_8.tex: ../ps/neo-vulgate/ps148_8.txt ../ps/fr/ps148_fr.txt
 	$(PS_TEX_BIN) -2 $^
 	
+../ps/neo-vulgate/ps149_8.tex: ../ps/neo-vulgate/ps149_8.txt ../ps/fr/ps149_fr.txt
+	$(PS_TEX_BIN) -2 $^
+	
+../ps/neo-vulgate/ps150_8.tex: ../ps/neo-vulgate/ps150_8.txt ../ps/fr/ps150_fr.txt
+	$(PS_TEX_BIN) -2 $^
+
 ../ps/neo-vulgate/benedictus_1.tex: ../ps/neo-vulgate/benedictus_1.txt ../ps/fr/benedictus_fr.txt
 	$(PS_TEX_BIN) -2 $^
 	
