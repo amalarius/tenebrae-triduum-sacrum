@@ -1,0 +1,9 @@
+name:Psalmus 148;
+initial-style: 0;
+
+%%
+(c4)
+~~L{a}u(g)dá(h)te(j) Dó(j)mi(j)num(j) de <b>cæ</b>(k jr)lis,(j. ) *(:z)
+lau(j)dá(j)te(j) e(j)um(j) <i>in</i>(j) <i>ex</i>(j)<b>cél</b>(h gr)sis.(g.)
+
+% vim: se enc=utf8 fenc=utf8 digraph syn=gabc:
