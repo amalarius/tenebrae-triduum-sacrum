@@ -1,9 +1,9 @@
 # Chemin vers les scripts de transformation
-RESP_TEX_BIN=../scripts/resp-tex.pl
-PS_TEX_BIN=../scripts/ps-schola-tex.pl
-LECT_TEX_BIN=../scripts/lect-tex.pl
-TIT_PS_TEX_BIN=../scripts/tit-ps-tex.pl
-ORA_TEX_BIN=../scripts/ora-tex.pl
+RESP_TEX_BIN=../../scripts/resp-tex.pl
+PS_TEX_BIN=../../scripts/ps-tex.pl
+LECT_TEX_BIN=../../scripts/lect-tex.pl
+TIT_PS_TEX_BIN=../../scripts/tit-ps-tex.pl
+ORA_TEX_BIN=../../scripts/ora-tex.pl
 
 # Fichiers gabc à compiler
 GABC_FILES=$(wildcard ../commun/*.gabc) $(wildcard ../AM2005/*.gabc)\
@@ -45,7 +45,7 @@ ORA_TEX=$(ORA_TXT:.txt=.tex)
 
 # Traduction de versets
 
-DOCUMENT=tenebrae-sabbato-sancto-schola
+DOCUMENT=tenebrae-sabbato-sancto
 PDF=$(DOCUMENT).pdf
 
 all: $(PDF)
