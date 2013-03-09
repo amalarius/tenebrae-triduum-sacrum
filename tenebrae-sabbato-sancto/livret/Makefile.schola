@@ -1,5 +1,5 @@
 # Chemin vers les scripts de transformation
-RESP_TEX_BIN=../../scripts/resp-tex.pl
+RESP_TEX_BIN=../../scripts/resp-vern-tex.pl
 PS_TEX_BIN=../../scripts/ps-schola-tex.pl
 LECT_TEX_BIN=../../scripts/lect-tex.pl
 TIT_PS_TEX_BIN=../../scripts/tit-ps-tex.pl

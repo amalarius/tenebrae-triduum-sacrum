@@ -1,5 +1,6 @@
 # Chemin vers les scripts de transformation
 RESP_TEX_BIN=../../scripts/resp-tex.pl
+RESP_VERN_TEX_BIN=../../scripts/resp-vern-tex.pl
 PS_TEX_BIN=../../scripts/ps-tex.pl
 LECT_TEX_BIN=../../scripts/lect-tex.pl
 TIT_PS_TEX_BIN=../../scripts/tit-ps-tex.pl
@@ -13,8 +14,9 @@ TEX_GEN_FILES=$(GABC_FILES:.gabc=.tex)
 
 ### Fichiers à transformer
 # Traduction de répons et antiennes
+RESP_LN_TXT=$(wildcard ../commun/ln/resp_*.txt)
 RESP_FR_TXT=$(wildcard ../commun/fr/resp_*.txt)
-RESP_FR_TEX=$(RESP_FR_TXT:.txt=.tex)
+RESP_TEX=$(RESP_LN_TXT:.txt=.tex)
 ANT_FR_TXT=$(wildcard ../commun/fr/ant_*.txt)
 ANT_FR_TEX=$(ANT_FR_TXT:.txt=.tex)
 VERS_FR_TXT=$(wildcard ../commun/fr/vers_*.txt)
@@ -52,22 +54,19 @@ all: $(PDF)
 
 # Attention ! Il faut compiler deux fois pour la gestion des
 #             références croisées
-$(DOCUMENT).pdf : $(DOCUMENT).tex ../commun/commun.tex $(TEX_GEN_FILES) $(RESP_FR_TEX)\
+$(DOCUMENT).pdf : $(DOCUMENT).tex ../commun/commun.tex $(TEX_GEN_FILES) $(RESP_TEX)\
 	$(ANT_FR_TEX) $(VERS_FR_TEX) $(TIT_PS_FR_TEX) $(PS_TEX)\
 	$(LECT_TEX)\
 	$(RESP_TEX_BIN) $(PS_TEX_BIN) $(LECT_TEX_BIN) $(TIT_PS_TEX_BIN)\
 	$(ORA_TEX)
 	lualatex $<
 	lualatex $<
-
-../commun/fr/resp%.tex: ../commun/fr/resp%.txt
-	$(RESP_TEX_BIN) $<
 	
 ../commun/fr/ant%.tex: ../commun/fr/ant%.txt
-	$(RESP_TEX_BIN) $<
+	$(RESP_VERN_TEX_BIN) $<
 
 ../commun/fr/vers%.tex: ../commun/fr/vers%.txt
-	$(RESP_TEX_BIN) $<
+	$(RESP_VERN_TEX_BIN) $<
 	
 ../ps/fr/tit_%_fr.tex: ../ps/fr/tit_%_fr.txt
 	$(TIT_PS_TEX_BIN) $<
@@ -147,12 +146,39 @@ $(DOCUMENT).pdf : $(DOCUMENT).tex ../commun/commun.tex $(TEX_GEN_FILES) $(RESP_F
 ../commun/oratio.tex: ../commun/oratio.txt ../commun/fr/oratio_fr.txt
 	$(ORA_TEX_BIN) $^
 
+../commun/ln/resp_Aestimatus_sum_ln.tex: ../commun/ln/resp_Aestimatus_sum_ln.txt ../commun/fr/resp_Aestimatus_sum_fr.txt
+	$(RESP_TEX_BIN) $^
+
+../commun/ln/resp_Ecce_ln.tex: ../commun/ln/resp_Ecce_ln.txt ../commun/fr/resp_Ecce_fr.txt
+	$(RESP_TEX_BIN) $^
+
+../commun/ln/resp_O_vos_omnes_ln.tex: ../commun/ln/resp_O_vos_omnes_ln.txt ../commun/fr/resp_O_vos_omnes_fr.txt
+	$(RESP_TEX_BIN) $^
+
+../commun/ln/resp_Recessit_ln.tex: ../commun/ln/resp_Recessit_ln.txt ../commun/fr/resp_Recessit_fr.txt
+	$(RESP_TEX_BIN) $^
+
+../commun/ln/resp_Sicut_ovis_ln.tex: ../commun/ln/resp_Sicut_ovis_ln.txt ../commun/fr/resp_Sicut_ovis_fr.txt
+	$(RESP_TEX_BIN) $^
+
+../commun/ln/resp_Astiterunt_ln.tex: ../commun/ln/resp_Astiterunt_ln.txt ../commun/fr/resp_Astiterunt_fr.txt
+	$(RESP_TEX_BIN) $^
+
+../commun/ln/resp_Ierusalem_ln.tex: ../commun/ln/resp_Ierusalem_ln.txt ../commun/fr/resp_Ierusalem_fr.txt
+	$(RESP_TEX_BIN) $^
+
+../commun/ln/resp_Plange_ln.tex: ../commun/ln/resp_Plange_ln.txt ../commun/fr/resp_Plange_fr.txt
+	$(RESP_TEX_BIN) $^
+
+../commun/ln/resp_Sepulto_ln.tex: ../commun/ln/resp_Sepulto_ln.txt ../commun/fr/resp_Sepulto_fr.txt
+	$(RESP_TEX_BIN) $^
+
 %.tex: %.gabc
 	gregorio $<
 	
 clean:
 	rm -f $(TEX_GEN_FILES) $(PDF) *~ *.log *.aux *.gaux
-	rm -f $(RESP_FR_TEX) $(RESP_FR_TEX:.tex=.aux)
+	rm -f $(RESP_TEX) $(RESP_TEX:.tex=.aux)
 	rm -f $(ANT_FR_TEX) $(ANT_FR_TEX:.tex=.aux)
 	rm -f $(TIT_PS_FR_TEX) $(TIT_PS_FR_TEX:.tex=.aux)
 	rm -f $(PS_TEX) $(PS_TEX:.tex=.aux)

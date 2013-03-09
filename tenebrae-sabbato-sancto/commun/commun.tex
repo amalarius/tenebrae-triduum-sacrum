@@ -70,12 +70,6 @@
 \end{center}%
 }
 
-\def\titrerepons#1{%
-\begin{center}%
-\large{\uppercase{#1}}%
-\end{center}%
-}
-
 \def\titrelecture#1#2{%
 {
 %\begin{center}%
@@ -85,6 +79,14 @@
 \centerline{#2}\par%
 %\end{center}%
 }
+}
+
+\def\titrerepons#1{%
+\centerline{\bf \textsc{#1}}\par%
+}
+
+\def\titrereponsref#1#2{%
+\titrelecture{#1}{#2}%
 }
 
 \def\titrenocturne#1{%
