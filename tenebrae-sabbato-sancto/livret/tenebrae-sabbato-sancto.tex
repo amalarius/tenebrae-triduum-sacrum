@@ -1,8 +1,10 @@
 \documentclass[11pt,twoside]{article} % use larger type; default would be 10pt
 \raggedbottom
 
-% usual packages loading:
-%\usepackage{luatextra}
+\usepackage{polyglossia}
+\usepackage{fontspec}
+\setmainlanguage{latin}
+
 \usepackage{graphicx} % support the \includegraphics command and options
 \usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
 \usepackage{gregoriotex} % for gregorio score inclusion
@@ -11,16 +13,7 @@
 
 \pdfminorversion=4
 
-% choose the language of the document here
-\usepackage[latin,frenchb]{babel}
-
-% use the two following package for using normal TeX fonts
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{luainputenc}
-
-% If you use usual TeX fonts, here is a starting point:
-\usepackage{times}
-
+\usepackage{calc}
 \usepackage{layout}
 
 \usepackage{parallel}
@@ -30,10 +23,9 @@
 \usepackage{fancyhdr}
 \usepackage{txfonts}
 \usepackage{textcomp}
-
-\usepackage{fontspec}
 \defaultfontfeatures{Mapping=tex-text}
 \usepackage{libertine}
+\libertine
 
 \usepackage{fullpage} % to reduce the margins
 \setlength{\hoffset}{-1in}
